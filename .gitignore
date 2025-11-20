@@ -385,6 +385,10 @@ analytics/
 # 🎯 PROJECT-SPECIFIC EXCLUSIONS
 # =============================================================================
 
+# Private documentation directories (PRIVATE REPOSITORY ONLY)
+docs/academic/
+docs/project/
+
 # Implementation directories (keep structure only in public)
 backend_agent_api/agents/*.py
 !backend_agent_api/agents/__init__.py
@@ -413,7 +417,8 @@ local/
 # =============================================================================
 #
 # ✅ ALLOWED in Public Repository:
-#   - Documentation (*.md, *.pdf)
+#   - docs/structure/ - Public documentation (directory structure, organization)
+#   - Documentation (*.md, *.pdf) in allowed directories
 #   - Architecture diagrams (*.png, *.svg, *.jpg)
 #   - Research papers and benchmarks
 #   - Python structure files (class signatures with 'pass' only)
@@ -421,6 +426,8 @@ local/
 #   - README files explaining architecture
 #
 # ❌ NEVER in Public Repository:
+#   - docs/academic/ - Private academic documents
+#   - docs/project/ - Private project documents
 #   - Implementation code with business logic
 #   - Test files and test implementations
 #   - Dependencies (requirements.txt, lock files)

@@ -1,4 +1,3 @@
----
 **📚 PhD APPLICATION PORTFOLIO PROJECT**
 
 > **Purpose**: This repository demonstrates research capabilities in multi-agent systems, retrieval-augmented generation, and production ML engineering for PhD applications (Fall 2026).
@@ -8,6 +7,7 @@
 > **Architecture**: Hierarchical multi-agent system with specialized sub-agents, long-term memory (Mem0), and hybrid RAG (vector + SQL + vision)
 
 **📄 For Academic Reviewers**:
+
 - **Research Statement**: See [`docs/academic/research.md`](./docs/academic/research.md) for detailed technical analysis and research contributions
 - **Key Files**:
   - [`backend_agent_api/agent.py`](./backend_agent_api/agent.py) - Agent orchestration with sub-agent delegation (structure only)
@@ -16,6 +16,7 @@
   - [`backend_rag_pipeline/`](./backend_rag_pipeline/) - Document processing pipeline structure
 
 **🎓 Research Contributions**:
+
 1. Hierarchical multi-agent coordination with specialized sub-agents
 2. Hybrid RAG system (semantic search + SQL generation + image analysis)
 3. Production-scale long-term memory with episodic recall
@@ -122,7 +123,5 @@ The complete codebase with full implementation details, test suites, and deploym
 ## 📄 License
 
 This repository is for academic review purposes. All rights reserved.
-
----
 
 **Note**: This is a research project portfolio for PhD applications. The public repository contains architecture documentation and research materials. Full implementation details are available upon request for academic reviewers.
