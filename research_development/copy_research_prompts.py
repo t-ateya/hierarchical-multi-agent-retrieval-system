@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Workshop Prompts Copy Script
+Research Prompts Copy Script
 
-Copies PRP commands and templates from the workshop materials to your project.
+Copies PRP commands and templates from the research development materials to your project.
 
 Usage:
-    python copy_workshop_prompts.py [target_directory]
+    python copy_research_prompts.py [target_directory]
 
 Example:
-    python copy_workshop_prompts.py ~/my-project
-    python copy_workshop_prompts.py  # Uses project root (parent of workshop_materials)
+    python copy_research_prompts.py ~/my-project
+    python copy_research_prompts.py  # Uses project root (parent of research_development)
 """
 
 import os
@@ -59,24 +59,24 @@ def copy_files_safe(source_dir: Path, target_dir: Path, files: List[str]) -> Tup
 
 
 def main():
-    """Main function for copying workshop prompts."""
+    """Main function for copying research prompts."""
 
     # Parse arguments
     if len(sys.argv) > 2:
-        print("Usage: python copy_workshop_prompts.py [target_directory]")
+        print("Usage: python copy_research_prompts.py [target_directory]")
         sys.exit(1)
 
-    # Get workshop materials directory (where this script is located)
+    # Get research development directory (where this script is located)
     script_dir = Path(__file__).parent
 
-    # Get target directory (default to parent of workshop_materials)
+    # Get target directory (default to parent of research_development)
     if len(sys.argv) == 2:
         target_root = Path(sys.argv[1]).expanduser().resolve()
     else:
-        # Default to the parent directory (ai-coding-workshop root)
+        # Default to the parent directory (project root)
         target_root = script_dir.parent
 
-    print(f"📂 Workshop Prompts Copier")
+    print(f"📂 Research Prompts Copier")
     print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━")
     print(f"Source: {script_dir}")
     print(f"Target: {target_root}")
@@ -164,7 +164,7 @@ Happy coding! 🚀
         print("❌ No files were copied. Please check the paths and try again.")
         print(f"""
 Troubleshooting:
-- Make sure you're running this script from: workshop_materials/
+- Make sure you're running this script from: research_development/
 - Check that these directories exist:
   - {commands_source}
   - {templates_source}
@@ -173,3 +173,4 @@ Troubleshooting:
 
 if __name__ == "__main__":
     main()
+

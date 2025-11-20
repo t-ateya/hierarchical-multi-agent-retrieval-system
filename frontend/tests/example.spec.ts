@@ -9,5 +9,5 @@ test('basic test - page loads', async ({ page }) => {
   await page.goto('/');
   
   // Just verify the page loads
-  await expect(page).toHaveTitle(/Dynamous/);
+  await expect(page).toHaveTitle(/Multi-Agent/);
 });

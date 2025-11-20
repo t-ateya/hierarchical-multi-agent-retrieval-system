@@ -2,7 +2,7 @@
 """
 deploy.py
 
-This script deploys the Dynamous AI Agent stack with different configurations:
+This script deploys the Hierarchical Multi-Agent Retrieval System with different configurations:
 - Local: Integrates with existing AI stack (no Caddy, uses overrides for existing Caddy)
 - Cloud: Standalone deployment with its own Caddy reverse proxy
 
@@ -90,7 +90,7 @@ def deploy_agent_stack(deployment_type, project_name, action="up"):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Deploy the Dynamous AI Agent stack',
+        description='Deploy the Hierarchical Multi-Agent Retrieval System',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -117,8 +117,8 @@ Examples:
     
     parser.add_argument(
         '--project', 
-        default='dynamous-agent',
-        help='Docker Compose project name (default: dynamous-agent)'
+        default='multi-agent-system',
+        help='Docker Compose project name (default: multi-agent-system)'
     )
     
     parser.add_argument(

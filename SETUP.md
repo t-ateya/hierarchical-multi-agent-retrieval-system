@@ -1,97 +1,6 @@
-# Hierarchical Multi-Agent Retrieval System
+# Setup Guide - Hierarchical Multi-Agent Retrieval System
 
-## 🎯 Project Overview
-
-This repository contains a production-ready hierarchical multi-agent system with retrieval-augmented generation capabilities. The system includes a full-stack implementation with FastAPI backend, React frontend, and comprehensive RAG pipeline. The full Stripe integration is implemented in the codebase.
-
-> Note: All research materials including the full README and the custom library of slash commands and subagents are in the `research_development/` folder. This README is focused on the AI Agent Template (overview & setup) that we'll build on top of together.
-
-## 📚 Documentation Navigation
-
-### Quick Links
-
-- **[Getting Started](./docs/project/START_HERE.md)** - New to the project? Start here
-- **[Research Overview](./docs/academic/research.md)** - Main research document
-- **[Project Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** - Complete directory structure
-- **[Agent Architecture](./docs/academic/AGENTS.md)** - Multi-agent system architecture
-- **[Deployment Guides](./docs/deployment/guides/)** - Platform-specific deployment instructions
-
-### Documentation Structure
-
-- **Academic Documentation** (`docs/academic/`) - Research methodology, architecture, and development processes
-- **Project Documentation** (`docs/project/`) - Setup guides, project overview, and submission materials
-- **Structure Documentation** (`docs/structure/`) - Directory structure and organization
-- **Deployment Documentation** (`docs/deployment/`) - Deployment guides for various platforms
-
-For complete documentation structure, see [DIRECTORY_STRUCTURE.md](./docs/structure/DIRECTORY_STRUCTURE.md).
-
-### What You'll Learn (Highest Level Mental Model)
-
-1. **Planning** - Context engineering for existing codebases (and how it applies to new projects too!)
-2. **Implementation** - From vague prompts to production code
-3. **Validation** - Ensuring quality with automated review workflows
-
-### What You Will Get
-
-- A Working Stripe integration that we will implement + the full agent SaaS starter template that is yours to keep (huge production value)
-- A library of battle tested PRP templates and reusable workflows
-- Yours to keep context engineering library with slash commands, subagents, and more
-- The skills to setup and effectively use AI coding assistants in existing and mature projects
-
-## 🛠️ Development Environment
-
-### Required Tools
-
-You'll need AI coding assistants for development:
-
-- **Claude Code** (Recommended) - Most autonomous, best for PRPs
-- **Cursor** - Great IDE integration, Background Agents
-- **Windsurf** - Beginner-friendly, good value
-- **Gemini CLI** - Huge context window, generous free tier
-- **ANY** - Any AI coding assistant you prefer (bring your favorite)
-
-## System Architecture
-
-This is a production-ready hierarchical multi-agent retrieval system with the following architecture:
-
-### Core Components
-
-```
-hierarchical-multi-agent-retrieval-system/
-├── backend_agent_api/      # Multi-Agent API Service (FastAPI)
-│   └── Hierarchical agent orchestration with sub-agent delegation
-├── backend_rag_pipeline/   # RAG Pipeline - Document processing and knowledge ingestion
-│   ├── Google_Drive/       # Google Drive integration
-│   └── Local_Files/        # Local file system integration
-├── frontend/               # React/TypeScript Frontend Application
-│   └── Real-time streaming interface with chat, admin, and payment components
-└── sql/                    # Database Schema and Migrations
-    └── PostgreSQL with Supabase (complete schema with RLS policies)
-```
-
-### Technology Stack
-
-- **Frontend**: React/TypeScript with real-time Server-Sent Events (SSE) streaming
-- **Backend API**: FastAPI with Pydantic AI agents for hierarchical agent coordination
-- **RAG Pipeline**: Document processing with vector search, SQL generation, and text processing
-- **Database**: Supabase (PostgreSQL) with Row-Level Security (RLS) policies
-- **Payments**: Stripe integration for token-based billing and subscriptions
-- **Memory**: Mem0 for long-term episodic memory
-- **Observability**: Langfuse for monitoring and tracing
-
-Each component is self-contained with its own:
-
-- Dependencies and virtual environment
-- Environment configuration
-- README with specific instructions
-- Deployment capabilities
-
-This modular approach allows you to:
-
-- Deploy components to different services (e.g., agent on GCP Cloud Run, RAG on DigitalOcean, frontend on Render)
-- Scale components independently based on load
-- Update and maintain each component without affecting others
-- Choose different deployment strategies for each component
+> **Note**: This file contains detailed setup instructions for the full implementation. This is for the private repository with complete codebase.
 
 ## Prerequisites & Setup
 
@@ -106,10 +15,7 @@ This modular approach allows you to:
 - Optional: Brave API key for web search (or local SearXNG)
 - Optional: Google Drive API credentials for Google Drive RAG
 
-### **📚 Click the chevron below to expand the full setup guide**
-
-<details>
-<summary><b>📚 Complete Setup Guide</b></summary>
+### **📚 Complete Setup Guide**
 
 ## Database Setup
 
@@ -402,16 +308,9 @@ python deploy.py --down --type local --project localai
 
 **Note:** Don't forget to run the SQL scripts first (see Database Setup above) and configure each `.env` file with your credentials.
 
-</details>
-
 ## Deployment Guide
 
 **Note:** This section provides comprehensive deployment options for production environments.
-
-<details>
-<summary><b>View Deployment Options</b></summary>
-
-We provide three deployment strategies, from simple to enterprise-grade:
 
 ### Option 1: DigitalOcean with Docker Compose (Simplest)
 
@@ -458,10 +357,7 @@ For enterprise deployments with maximum flexibility:
 | Geographic Distribution | Single region           | Multi-region              | Global            |
 | Best For                | Quick start or Local AI | Most cloud based projects | Enterprise        |
 
-</details>
-
-<details>
-<summary><strong>🔍 Agent Observability with LangFuse (Optional)</strong></summary>
+## Agent Observability with LangFuse (Optional)
 
 This deployment includes optional LangFuse integration for comprehensive agent observability. LangFuse provides detailed insights into agent conversations, performance metrics, and debugging capabilities - particularly valuable for production deployments.
 
@@ -509,10 +405,7 @@ This deployment includes optional LangFuse integration for comprehensive agent o
 
 The LangFuse integration is designed to be zero-impact when disabled, making it perfect for development environments where observability isn't needed.
 
-</details>
-
-<details>
-<summary><strong>🔧 Troubleshooting</strong></summary>
+## Troubleshooting
 
 ### Docker Compose Issues
 
@@ -578,10 +471,7 @@ curl http://localhost:8001/health
 curl http://localhost:8082/health
 ```
 
-</details>
-
-<details>
-<summary><strong>🧪 Testing</strong></summary>
+## Testing
 
 ### Frontend Testing with Playwright
 
@@ -623,8 +513,6 @@ The tests use comprehensive mocks for:
 - Agent API streaming responses
 - User sessions and conversation data
 
-</details>
-
 ## Support
 
 For detailed instructions on each component, refer to their individual README files:
@@ -635,6 +523,3 @@ For detailed instructions on each component, refer to their individual README fi
 
 Remember: The modular structure allows you to start with local deployment and gradually move components to the cloud as needed!
 
-## Research Resources
-
-See `research_development/` for the main research and development resources.

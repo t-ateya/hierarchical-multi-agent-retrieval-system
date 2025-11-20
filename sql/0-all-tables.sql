@@ -1,8 +1,8 @@
 -- ==============================================================================
--- Dynamous AI Agent Database Schema - Complete Setup
+-- Multi-Agent Retrieval System Database Schema - Complete Setup
 -- ==============================================================================
 -- This file contains all tables, functions, triggers, and policies in correct order
--- Run this script to set up the complete database schema for the Dynamous AI Agent
+-- Run this script to set up the complete database schema for the Multi-Agent Retrieval System
 
 -- Enable necessary extensions
 CREATE EXTENSION IF NOT EXISTS vector;

@@ -1,4 +1,4 @@
-# Dynamous AI Agent API
+# Multi-Agent Retrieval System - API
 
 A production-ready FastAPI backend that serves the Pydantic AI agent with capabilities including Agentic RAG, long-term memory, web search, image analysis, and code execution. This API provides real-time streaming responses and conversation management for AI agent applications.
 

@@ -52,7 +52,7 @@ test.describe('Chat Flow', () => {
     
     if (!foundChatInput) {
       // If no specific chat input found, just verify we're on the main page
-      await expect(page).toHaveTitle(/Dynamous/);
+      await expect(page).toHaveTitle(/Multi-Agent/);
     }
   });
 

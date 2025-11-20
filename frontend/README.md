@@ -1,4 +1,4 @@
-# Dynamous AI Agent Frontend
+# Multi-Agent Retrieval System - Frontend
 
 A modern React application built with Vite, TypeScript, and Shadcn UI that provides a polished interface for interacting with the AI agent. This frontend transforms the powerful backend agent into an accessible, user-friendly application with real-time streaming responses, conversation management, and a beautiful UI.
 
