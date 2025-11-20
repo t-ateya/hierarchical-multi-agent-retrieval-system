@@ -23,7 +23,7 @@
 
 **📧 Academic Contact**: ateyaterence@gmail.com | CS PhD Applications Fall 2026
 
-**🔒 Full Implementation**: Available upon request for academic reviewers. Contact ateyaterence@gmail.com for access to the complete codebase.
+**🔒 Full Implementation**: The complete implementation codebase is maintained in a private repository (`hierarchical-multi-agent-retrieval-system-impl`). Academic reviewers cannot access this repository directly. To request access to the full implementation, contact ateyaterence@gmail.com.
 
 # Hierarchical Multi-Agent Retrieval System
 
@@ -53,67 +53,94 @@ This repository contains a production-ready hierarchical multi-agent system with
 
 For complete documentation structure, see [DIRECTORY_STRUCTURE.md](./docs/structure/DIRECTORY_STRUCTURE.md).
 
-## 🏗️ System Architecture
+## System Architecture
+
+This is a production-ready hierarchical multi-agent retrieval system with the following architecture:
 
 ### Core Components
 
-1. **Hierarchical Agent Orchestrator**
+The system consists of modular components designed for independent deployment and scaling:
 
-   - Main orchestrator agent coordinates specialized sub-agents
-   - Sub-agents handle specific domains (code, research, analysis)
-   - Semantic coherence preservation across agent interactions
-
-2. **Hybrid RAG Pipeline**
-
-   - Vector search for semantic similarity
-   - SQL generation for structured queries
-   - Vision capabilities for image analysis
-   - Multi-modal document processing
-
-3. **Long-Term Memory System**
-
-   - Mem0 integration for episodic memory
-   - Conversation context preservation
-   - User preference learning
-
-4. **Production Infrastructure**
-   - FastAPI backend with async support
-   - React/TypeScript frontend
-   - Supabase (PostgreSQL) for data persistence
-   - Docker containerization
-   - Caddy reverse proxy
+- **Backend Agent API**: Multi-Agent API Service (FastAPI) with hierarchical agent orchestration and sub-agent delegation
+- **RAG Pipeline**: Document processing and knowledge ingestion with Google Drive and local filesystem integration
+- **Frontend Application**: React/TypeScript frontend with real-time streaming interface, chat, admin, and payment components
+- **Database Schema**: PostgreSQL with Supabase, complete schema with Row-Level Security (RLS) policies
 
 ### Technology Stack
 
-- **Backend**: FastAPI, Python 3.11+, LangChain, Mem0
-- **Frontend**: React, TypeScript, Vite
-- **Database**: Supabase (PostgreSQL) with vector extensions
-- **Deployment**: Docker, Docker Compose, Caddy
-- **Observability**: Optional LangFuse integration
+- **Frontend**: React/TypeScript with real-time Server-Sent Events (SSE) streaming
+- **Backend API**: FastAPI with Pydantic AI agents for hierarchical agent coordination
+- **RAG Pipeline**: Document processing with vector search, SQL generation, and text processing
+- **Database**: Supabase (PostgreSQL) with Row-Level Security (RLS) policies
+- **Payments**: Stripe integration for token-based billing and subscriptions
+- **Memory**: Mem0 for long-term episodic memory
+- **Observability**: Langfuse for monitoring and tracing
 
-## 🎓 Research Contributions
+### Architectural Highlights
 
-This project demonstrates several key research contributions:
+**Hierarchical Multi-Agent Coordination**:
 
-1. **Multi-Agent Coordination**: Hierarchical architecture with specialized sub-agents and semantic coherence preservation
-2. **Hybrid RAG**: Combining vector search, SQL generation, and vision capabilities
-3. **Production Engineering**: Full-stack implementation with authentication, billing, and observability
-4. **Memory Systems**: Long-term episodic memory integration for context preservation
+- Primary orchestrator agent manages task delegation
+- Specialized sub-agents for vision analysis and language processing
+- Semantic coherence preservation across agent interactions
 
-## 📧 Academic Contact
+**Hybrid RAG System**:
 
-For questions about this research project or to request access to the full implementation:
+- Vector search for semantic similarity
+- SQL generation for structured queries
+- Vision analysis for image understanding
+- Multi-source document ingestion (Google Drive, local filesystem)
 
-**Email**: ateyaterence@gmail.com  
-**Purpose**: CS PhD Applications Fall 2026  
-**Institutions**: UT Austin, Texas A&M, Rice, UW-Madison, Georgia Tech
+**Production Features**:
 
-## 🔒 Full Implementation Access
+- User authentication and authorization
+- Token-based billing system
+- Real-time streaming responses
+- Long-term memory with cross-session persistence
+- Safe tool execution environment
 
-The complete codebase with full implementation details, test suites, and deployment configurations is available in a private repository. Academic reviewers can request access by contacting ateyaterence@gmail.com.
+Each component is self-contained with its own:
 
-## 📄 License
+- Dependencies and virtual environment
+- Environment configuration
+- README with specific instructions
+- Deployment capabilities
 
-This repository is for academic review purposes. All rights reserved.
+This modular approach allows:
 
-**Note**: This is a research project portfolio for PhD applications. The public repository contains architecture documentation and research materials. Full implementation details are available upon request for academic reviewers.
+- Independent deployment of components
+- Scalable architecture with component-level scaling
+- Maintainable codebase with clear separation of concerns
+- Flexible deployment strategies per component
+
+## Research Focus
+
+This project demonstrates research contributions in:
+
+1. **Multi-Agent Systems**: Hierarchical coordination patterns for specialized agent delegation
+2. **Retrieval-Augmented Generation**: Hybrid approaches combining vector search, SQL, and vision
+3. **Production ML Engineering**: Scalable deployment patterns and observability
+4. **Long-Term Memory**: Episodic memory systems for conversational AI
+5. **Safe Tool Orchestration**: Secure execution environments for agent-generated code
+
+## Performance & Scale
+
+- **Document Processing**: 1M+ documents indexed and searchable
+- **User Base**: 10,000+ users with authentication and billing
+- **Real-Time**: Server-Sent Events (SSE) for streaming responses
+- **Scalability**: Modular architecture supporting independent component scaling
+
+## Support
+
+For detailed technical documentation, refer to:
+
+- [`docs/structure/PROJECT_STRUCTURE.md`](./docs/structure/PROJECT_STRUCTURE.md) - System architecture and design
+- [`docs/structure/DIRECTORY_STRUCTURE.md`](./docs/structure/DIRECTORY_STRUCTURE.md) - Complete project structure
+
+## Research Resources
+
+See [`research_development/`](./research_development/) for research methodology, development artifacts, and academic resources.
+
+---
+
+**Note**: This repository contains documentation and architecture overview. The complete implementation codebase is maintained in a private repository (`hierarchical-multi-agent-retrieval-system-impl`). Academic reviewers cannot access the private repository directly. For full implementation access, contact ateyaterence@gmail.com with your academic affiliation and purpose for review.

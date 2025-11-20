@@ -63,13 +63,16 @@ $ExcludeFiles = @(
     ".gitignore-public",
     "CLEAN_PUBLIC_REPO.bat",
     "REMOVE_CODE_FROM_PUBLIC.bat",
-    "README-PUBLIC.md",
-    "Caddyfile",
-    "caddy-addon.conf",
-    "deploy.py",
-    "docker-compose.yml",
-    "docker-compose.caddy.yml",
-    "smart-push.ps1"
+        "README-PUBLIC.md",
+        "README-PRIVATE.md",
+        "Caddyfile",
+        "caddy-addon.conf",
+        "deploy.py",
+        "docker-compose.yml",
+        "docker-compose.caddy.yml",
+        "smart-push.ps1",
+        "cleanup-public-repo.ps1",
+        "remove-empty-dirs.ps1"
 )
 
 if ($IsPublic) {
@@ -97,6 +100,33 @@ if ($IsPublic) {
                 Write-Host "   Removing: $File" -ForegroundColor Gray
                 git rm --cached $File 2>$null | Out-Null
             }
+        }
+    }
+    
+    # Remove Docker Compose files (wildcard pattern)
+    $DockerFiles = git ls-files "docker-compose*.yml" 2>$null
+    if ($DockerFiles) {
+        foreach ($DockerFile in $DockerFiles) {
+            Write-Host "   Removing: $DockerFile" -ForegroundColor Gray
+            git rm --cached $DockerFile 2>$null | Out-Null
+        }
+    }
+    
+    # Remove PowerShell scripts (wildcard pattern)
+    $PsScripts = git ls-files "*.ps1" 2>$null
+    if ($PsScripts) {
+        foreach ($Script in $PsScripts) {
+            Write-Host "   Removing: $Script" -ForegroundColor Gray
+            git rm --cached $Script 2>$null | Out-Null
+        }
+    }
+    
+    # Remove batch scripts (wildcard pattern)
+    $BatScripts = git ls-files "*.bat" 2>$null
+    if ($BatScripts) {
+        foreach ($Script in $BatScripts) {
+            Write-Host "   Removing: $Script" -ForegroundColor Gray
+            git rm --cached $Script 2>$null | Out-Null
         }
     }
     

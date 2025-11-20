@@ -42,13 +42,19 @@ $FilesToRemove = @(
     "HUMAN_REPO_GUIDELINES.md",
     ".gitignore-public",
     "README-PUBLIC.md",
+    "README-PRIVATE.md",
     "SETUP.md",
     "Caddyfile",
     "caddy-addon.conf",
     "deploy.py",
     "docker-compose.yml",
     "docker-compose.caddy.yml",
-    "smart-push.ps1"
+    "docker-compose.*.yml",
+    "smart-push.ps1",
+    "cleanup-public-repo.ps1",
+    "remove-empty-dirs.ps1",
+    "*.ps1",
+    "*.bat"
 )
 
 Write-Host "[STEP 1] Removing directories from git tracking..." -ForegroundColor Cyan
