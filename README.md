@@ -89,7 +89,7 @@ Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the
 
 **Name:** T Ateya
 
-**Background:** ML Engineer (7+ yrs)
+**Background:** AI Systems Engineer & Machine Learning Researcher (7+ yrs)
 
 **Target:** PhD in CS/Data Science
 
@@ -509,7 +509,7 @@ This work is being prepared for submission to relevant venues in multi-agent sys
 
 ### Quick Contact
 
-**T Ateya** | ML Engineer | PhD Applicant (Fall 2026)
+**T Ateya** | AI Systems Engineer & Machine Learning Researcher | PhD Applicant (Fall 2026)
 
 [📧 Academic Email](mailto:tateya@uco.edu) • [📧 Company Email](mailto:softbrickstech@gmail.com) • [🔗 LinkedIn](https://linkedin.com/in/ateya-terence)
 
@@ -525,7 +525,7 @@ This work is being prepared for submission to relevant venues in multi-agent sys
 
 **T Ateya**
 
-Machine Learning Engineer
+AI Systems Engineer & Machine Learning Researcher
 
 PhD Applicant (Fall 2026)
 
