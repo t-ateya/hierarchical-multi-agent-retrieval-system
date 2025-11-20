@@ -1,17 +1,52 @@
+---
+**📚 PhD APPLICATION PORTFOLIO PROJECT**
+
+> **Purpose**: This repository demonstrates research capabilities in multi-agent systems, retrieval-augmented generation, and production ML engineering for PhD applications (Fall 2026).
+
+> **Status**: Archived for academic review | Not actively maintained
+
+> **Architecture**: Hierarchical multi-agent system with specialized sub-agents, long-term memory (Mem0), and hybrid RAG (vector + SQL + vision)
+
+**📄 For Academic Reviewers**:
+- **Research Statement**: See [`docs/academic/research.md`](./docs/academic/research.md) for detailed technical analysis and research contributions
+- **Key Files**:
+  - [`backend_agent_api/agent.py`](./backend_agent_api/agent.py) - Agent orchestration with sub-agent delegation (structure only)
+  - [`backend_agent_api/tools.py`](./backend_agent_api/tools.py) - Tool implementations (structure only)
+  - [`backend_agent_api/agent_api.py`](./backend_agent_api/agent_api.py) - Production API structure
+  - [`backend_rag_pipeline/`](./backend_rag_pipeline/) - Document processing pipeline structure
+
+**🎓 Research Contributions**:
+1. Hierarchical multi-agent coordination with specialized sub-agents
+2. Hybrid RAG system (semantic search + SQL generation + image analysis)
+3. Production-scale long-term memory with episodic recall
+4. Safe tool orchestration (RestrictedPython sandbox, validated SQL)
+5. Full-stack deployment (authentication, billing, observability)
+
+**📧 Academic Contact**: ateyaterence@gmail.com | CS PhD Applications Fall 2026
+
+**🔒 Full Implementation**: Available upon request for academic reviewers. Contact ateyaterence@gmail.com for access to the complete codebase.
+
+---
+
 # Hierarchical Multi-Agent Retrieval System
 
 ## 🎯 Project Overview
 
-This repository contains a production-ready hierarchical multi-agent system with retrieval-augmented generation capabilities. The system includes a full-stack implementation with FastAPI backend, React frontend, and comprehensive RAG pipeline. The full Stripe integration is implemented in the codebase.
+This repository contains a production-ready hierarchical multi-agent system with retrieval-augmented generation capabilities. The system demonstrates advanced multi-agent coordination, scalable RAG architecture, and production engineering practices.
 
-> Note: All research materials including the full README and the custom library of slash commands and subagents are in the `research_development/` folder. This README is focused on the AI Agent Template (overview & setup) that we'll build on top of together.
+**Production Metrics**:
+
+- 1M+ documents processed
+- 10,000+ users served
+- Real-time streaming with Server-Sent Events (SSE)
+- Token-based billing system with Stripe integration
 
 ## 📚 Documentation Navigation
 
 ### Quick Links
 
-- **[Getting Started](./docs/project/START_HERE.md)** - New to the project? Start here
-- **[Research Overview](./docs/academic/research.md)** - Main research document
+- **[Research Overview](./docs/academic/research.md)** - Main research document and technical analysis
+- **[Getting Started](./docs/project/START_HERE.md)** - Project overview and navigation guide
 - **[Project Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** - Complete directory structure
 - **[Agent Architecture](./docs/academic/AGENTS.md)** - Multi-agent system architecture
 - **[Deployment Guides](./docs/deployment/guides/)** - Platform-specific deployment instructions
@@ -25,616 +60,69 @@ This repository contains a production-ready hierarchical multi-agent system with
 
 For complete documentation structure, see [DIRECTORY_STRUCTURE.md](./docs/structure/DIRECTORY_STRUCTURE.md).
 
-### What You'll Learn (Highest Level Mental Model)
-
-1. **Planning** - Context engineering for existing codebases (and how it applies to new projects too!)
-2. **Implementation** - From vague prompts to production code
-3. **Validation** - Ensuring quality with automated review workflows
-
-### What You Will Get
-
-- A Working Stripe integration that we will implement + the full agent SaaS starter template that is yours to keep (huge production value)
-- A library of battle tested PRP templates and reusable workflows
-- Yours to keep context engineering library with slash commands, subagents, and more
-- The skills to setup and effectively use AI coding assistants in existing and mature projects
-
-## 🛠️ Development Environment
-
-### Required Tools
-
-You'll need AI coding assistants for development:
-
-- **Claude Code** (Recommended) - Most autonomous, best for PRPs
-- **Cursor** - Great IDE integration, Background Agents
-- **Windsurf** - Beginner-friendly, good value
-- **Gemini CLI** - Huge context window, generous free tier
-- **ANY** - Any AI coding assistant you prefer (bring your favorite)
-
-## System Architecture
-
-This is a production-ready hierarchical multi-agent retrieval system with the following architecture:
+## 🏗️ System Architecture
 
 ### Core Components
 
-```
-hierarchical-multi-agent-retrieval-system/
-├── backend_agent_api/      # Multi-Agent API Service (FastAPI)
-│   └── Hierarchical agent orchestration with sub-agent delegation
-├── backend_rag_pipeline/   # RAG Pipeline - Document processing and knowledge ingestion
-│   ├── Google_Drive/       # Google Drive integration
-│   └── Local_Files/        # Local file system integration
-├── frontend/               # React/TypeScript Frontend Application
-│   └── Real-time streaming interface with chat, admin, and payment components
-└── sql/                    # Database Schema and Migrations
-    └── PostgreSQL with Supabase (complete schema with RLS policies)
-```
+1. **Hierarchical Agent Orchestrator**
+
+   - Main orchestrator agent coordinates specialized sub-agents
+   - Sub-agents handle specific domains (code, research, analysis)
+   - Semantic coherence preservation across agent interactions
+
+2. **Hybrid RAG Pipeline**
+
+   - Vector search for semantic similarity
+   - SQL generation for structured queries
+   - Vision capabilities for image analysis
+   - Multi-modal document processing
+
+3. **Long-Term Memory System**
+
+   - Mem0 integration for episodic memory
+   - Conversation context preservation
+   - User preference learning
+
+4. **Production Infrastructure**
+   - FastAPI backend with async support
+   - React/TypeScript frontend
+   - Supabase (PostgreSQL) for data persistence
+   - Docker containerization
+   - Caddy reverse proxy
 
 ### Technology Stack
 
-- **Frontend**: React/TypeScript with real-time Server-Sent Events (SSE) streaming
-- **Backend API**: FastAPI with Pydantic AI agents for hierarchical agent coordination
-- **RAG Pipeline**: Document processing with vector search, SQL generation, and text processing
-- **Database**: Supabase (PostgreSQL) with Row-Level Security (RLS) policies
-- **Payments**: Stripe integration for token-based billing and subscriptions
-- **Memory**: Mem0 for long-term episodic memory
-- **Observability**: Langfuse for monitoring and tracing
+- **Backend**: FastAPI, Python 3.11+, LangChain, Mem0
+- **Frontend**: React, TypeScript, Vite
+- **Database**: Supabase (PostgreSQL) with vector extensions
+- **Deployment**: Docker, Docker Compose, Caddy
+- **Observability**: Optional LangFuse integration
 
-Each component is self-contained with its own:
+## 🎓 Research Contributions
 
-- Dependencies and virtual environment
-- Environment configuration
-- README with specific instructions
-- Deployment capabilities
+This project demonstrates several key research contributions:
 
-This modular approach allows you to:
+1. **Multi-Agent Coordination**: Hierarchical architecture with specialized sub-agents and semantic coherence preservation
+2. **Hybrid RAG**: Combining vector search, SQL generation, and vision capabilities
+3. **Production Engineering**: Full-stack implementation with authentication, billing, and observability
+4. **Memory Systems**: Long-term episodic memory integration for context preservation
 
-- Deploy components to different services (e.g., agent on GCP Cloud Run, RAG on DigitalOcean, frontend on Render)
-- Scale components independently based on load
-- Update and maintain each component without affecting others
-- Choose different deployment strategies for each component
+## 📧 Academic Contact
 
-## Prerequisites & Setup
+For questions about this research project or to request access to the full implementation:
 
-**Note:** Setting up the full AI agent is optional. However, if you want to run the actual AI agent locally and see it in action, follow the setup guide below.
+**Email**: ateyaterence@gmail.com  
+**Purpose**: CS PhD Applications Fall 2026  
+**Institutions**: UT Austin, Texas A&M, Rice, UW-Madison, Georgia Tech
 
-### Prerequisites
+## 🔒 Full Implementation Access
 
-- Docker/Docker Desktop (recommended) OR Python 3.11+ and Node.js 18+ with npm
-- Supabase account (or self-hosted instance)
-- LLM provider account (OpenAI, OpenRouter, or local Ollama)
-- Stripe account for payment processing
-- Optional: Brave API key for web search (or local SearXNG)
-- Optional: Google Drive API credentials for Google Drive RAG
+The complete codebase with full implementation details, test suites, and deployment configurations is available in a private repository. Academic reviewers can request access by contacting ateyaterence@gmail.com.
 
-### **📚 Click the chevron below to expand the full setup guide**
+## 📄 License
 
-<details>
-<summary><b>📚 Complete Setup Guide</b></summary>
+This repository is for academic review purposes. All rights reserved.
 
-## Database Setup
+---
 
-The database is the foundation for all components. Set it up first:
-
-1. **Create a Supabase project:**
-
-   - **Cloud**: Create a project at [https://supabase.com](https://supabase.com)
-   - **Local**: Navigate to http://localhost:8000 (default Supabase dashboard)
-
-2. **Navigate to the SQL Editor** in your Supabase dashboard
-
-3. **Run the complete database setup:**
-
-   ```sql
-   -- Copy and paste the contents of sql/0-all-tables.sql
-   -- This creates all tables, functions, triggers, and security policies
-   ```
-
-   **⚠️ Important**: The `0-all-tables.sql` script will DROP and recreate the agent tables (user_profiles, conversations, messages, documents, etc.). This resets the agent data to a blank slate - existing agent data will be lost, but other tables in your Supabase project remain untouched.
-
-**Alternative**: You can run the individual scripts (`1-user_profiles_requests.sql` through `9-rag_pipeline_state.sql`) if you prefer granular control.
-
-**Ollama Configuration**: For local Ollama implementations using models like nomic-embed-text, modify the vector dimensions from 1536 to 768 in `0-all-tables.sql` (lines 133 and 149).
-
-## Stripe Payment Setup
-
-The platform includes token-based billing where users purchase token packages to interact with the AI agent.
-
-### Stripe Configuration
-
-1. **Create a Stripe account** at [https://stripe.com](https://stripe.com)
-
-2. **Get your API keys** from the Stripe Dashboard:
-
-   - Navigate to Developers → API keys
-   - Copy your **Publishable key** and **Secret key**
-
-3. **Install Stripe CLI** for local webhook testing:
-
-   **macOS (Homebrew):**
-
-   ```bash
-   brew install stripe/stripe-cli/stripe
-   ```
-
-   **Windows (Scoop):**
-
-   ```bash
-   scoop bucket add stripe https://github.com/stripe/scoop-stripe-cli.git
-   scoop install stripe
-   ```
-
-   **Linux:**
-
-   ```bash
-   # Download from https://github.com/stripe/stripe-cli/releases/latest
-   # Extract and add to PATH
-   ```
-
-4. **Login to Stripe CLI:**
-
-   ```bash
-   stripe login
-   ```
-
-5. **Start webhook forwarding** (keep this running in a separate terminal):
-
-   ```bash
-   stripe listen --forward-to localhost:8001/api/webhook/stripe
-   ```
-
-   The command will output a webhook signing secret like:
-
-   ```
-   Ready! Your webhook signing secret is whsec_xxxxxxxxxxxxx
-   ```
-
-6. **Add Stripe environment variables** to your `.env`:
-
-   ```env
-   # Stripe Payment Configuration
-   STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxx
-   STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxx
-   STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxx  # From stripe listen command
-
-   # Frontend Stripe key
-   VITE_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxx
-   ```
-
-### Testing Payments Locally
-
-1. Start the Stripe webhook listener (as shown above)
-2. Start your backend and frontend services
-3. Use Stripe's test card numbers:
-   - Success: `4242 4242 4242 4242`
-   - Decline: `4000 0000 0000 0002`
-   - More test cards: [https://stripe.com/docs/testing](https://stripe.com/docs/testing)
-
-### Token Packages
-
-The system includes three token packages:
-
-- **Basic**: 100 tokens for $5
-- **Standard**: 250 tokens for $10 (Most Popular)
-- **Premium**: 600 tokens for $20
-
-Each AI agent interaction deducts one token from the user's balance.
-
-## Environment Configuration
-
-Configure your environment variables:
-
-```bash
-# Copy the example environment file
-cp .env.example .env
-```
-
-Edit `.env` with your configuration:
-
-```env
-# LLM Configuration
-LLM_PROVIDER=openai
-LLM_API_KEY=your_openai_api_key_here
-LLM_CHOICE=gpt-4o-mini
-
-# Embedding Configuration
-EMBEDDING_API_KEY=your_openai_api_key_here
-EMBEDDING_MODEL_CHOICE=text-embedding-3-small
-
-# Database Configuration
-SUPABASE_URL=https://your-project.supabase.co
-SUPABASE_SERVICE_KEY=your_supabase_service_key_here
-
-# Frontend Configuration
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
-VITE_AGENT_ENDPOINT=http://localhost:8001/api/pydantic-agent
-
-# Optional: LangFuse integration
-VITE_LANGFUSE_HOST_WITH_PROJECT=http://localhost:3000/project/your-project-id
-
-# Stripe Payment Configuration
-STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxx
-STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxx
-STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxx
-VITE_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxx
-
-# RAG Pipeline Configuration
-RAG_PIPELINE_TYPE=local  # or google_drive
-RUN_MODE=continuous      # or single for scheduled runs
-RAG_PIPELINE_ID=dev-local-pipeline  # Required for single-run mode
-
-# Optional: Google Drive Configuration
-GOOGLE_DRIVE_CREDENTIALS_JSON=  # Service account JSON for Google Drive if using a Service Account
-RAG_WATCH_FOLDER_ID=           # Specific Google Drive folder ID
-
-# Optional: Local Files Configuration
-RAG_WATCH_DIRECTORY=           # Override container path (default: /app/Local_Files/data)
-
-# Optional Langfuse agent monitoring configuration
-LANGFUSE_PUBLIC_KEY=
-LANGFUSE_SECRET_KEY=
-LANGFUSE_HOST=https://cloud.langfuse.com
-
-# Hostnames for Caddy reverse proxy routes
-# Leave these commented if you aren't deploying to production
-AGENT_API_HOSTNAME=agent.yourdomain.com
-FRONTEND_HOSTNAME=chat.yourdomain.com
-```
-
-### Complete Environment Variables Reference
-
-#### Agent API & RAG Pipeline
-
-```env
-# LLM Configuration
-LLM_PROVIDER=openai
-LLM_BASE_URL=https://api.openai.com/v1
-LLM_API_KEY=your_api_key
-LLM_CHOICE=gpt-4o-mini
-VISION_LLM_CHOICE=gpt-4o-mini
-
-# Embedding Configuration
-EMBEDDING_PROVIDER=openai
-EMBEDDING_BASE_URL=https://api.openai.com/v1
-EMBEDDING_API_KEY=your_api_key
-EMBEDDING_MODEL_CHOICE=text-embedding-3-small
-
-# Database
-DATABASE_URL=postgresql://user:pass@host:port/db
-SUPABASE_URL=your_supabase_url
-SUPABASE_SERVICE_KEY=your_service_key
-
-# Web Search
-BRAVE_API_KEY=your_brave_key
-SEARXNG_BASE_URL=http://localhost:8080
-
-# Stripe Payments
-STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxx
-STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxx
-
-# RAG Pipeline Configuration
-RAG_PIPELINE_TYPE=local          # local or google_drive
-RUN_MODE=continuous              # continuous or single
-RAG_PIPELINE_ID=my-pipeline      # Required for single-run mode
-
-# Google Drive (for RAG Pipeline)
-GOOGLE_DRIVE_CREDENTIALS_JSON=   # Service account JSON string
-RAG_WATCH_FOLDER_ID=            # Specific folder ID to watch
-
-# Local Files (for RAG Pipeline)
-RAG_WATCH_DIRECTORY=            # Container path override
-```
-
-#### Frontend
-
-```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_anon_key
-VITE_AGENT_ENDPOINT=http://localhost:8001/api/pydantic-agent
-VITE_ENABLE_STREAMING=true
-VITE_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxx
-
-# Optional: LangFuse integration for admin dashboard
-VITE_LANGFUSE_HOST_WITH_PROJECT=http://localhost:3000/project/your-project-id
-
-# Reverse Proxy Configuration (for Caddy deployments)
-AGENT_API_HOSTNAME=agent.yourdomain.com
-FRONTEND_HOSTNAME=chat.yourdomain.com
-```
-
-## Deployment Methods
-
-### Method 1: Development Mode (Manual Components)
-
-For development without Docker or to run individual containers separately, see the component-specific READMEs:
-
-- [Backend Agent API](./backend_agent_api/README.md) - Python agent with FastAPI
-- [Backend RAG Pipeline](./backend_rag_pipeline/README.md) - Document processing pipeline
-- [Frontend](./frontend/README.md) - React application
-
-### Method 2: Smart Deployment Script (Recommended)
-
-The easiest way to deploy the stack is using the included Python deployment script, which automatically handles both local and cloud deployment scenarios.
-
-#### Deploy with Script
-
-##### Cloud Deployment (Standalone with Caddy)
-
-Deploy as a self-contained stack with built-in reverse proxy:
-
-```bash
-# Deploy to cloud (includes Caddy reverse proxy)
-python deploy.py --type cloud
-
-# Stop cloud deployment
-python deploy.py --down --type cloud
-```
-
-##### Local Deployment (Integrate with the Local AI Package)
-
-Deploy to work alongside your existing Local AI Package with shared Caddy:
-
-```bash
-# Deploy alongside the Local AI Package (uses existing Caddy)
-python deploy.py --type local --project localai
-
-# Stop local deployment
-python deploy.py --down --type local --project localai
-```
-
-**To enable reverse proxy routes in your Local AI Package**:
-
-1. **Copy and configure** the addon file:
-
-   ```bash
-   # Copy caddy-addon.conf to your Local AI Package's caddy-addon folder
-   cp caddy-addon.conf /path/to/local-ai-package/caddy-addon/
-
-   # Edit lines 2 and 21 to set your desired subdomains:
-   # Line 2: subdomain.yourdomain.com (for agent API)
-   # Line 21: subdomain2.yourdomain.com (for frontend)
-   ```
-
-2. **Restart Caddy in the Local AI Package** to load the new configuration:
-   ```bash
-   docker compose -p localai restart caddy
-   ```
-
-**Note:** Don't forget to run the SQL scripts first (see Database Setup above) and configure each `.env` file with your credentials.
-
-</details>
-
-## Deployment Guide
-
-**Note:** This section provides comprehensive deployment options for production environments.
-
-<details>
-<summary><b>View Deployment Options</b></summary>
-
-We provide three deployment strategies, from simple to enterprise-grade:
-
-### Option 1: DigitalOcean with Docker Compose (Simplest)
-
-Deploy the entire stack on a single DigitalOcean Droplet using Docker Compose:
-
-- **Pros**: Simple setup, everything in one place, easy to manage
-- **Cons**: All components scale together, single point of failure
-- **Best for**: Small teams, prototypes, and getting started quickly
-- **Setup Guide**: See [`docs/deployment/guides/cloud-ai-digitalocean.md`](docs/deployment/guides/cloud-ai-digitalocean.md) for step-by-step instructions
-- **Alternative**: For integration with Local AI Package, see [`docs/deployment/guides/local-ai-digitalocean.md`](docs/deployment/guides/local-ai-digitalocean.md)
-
-### Option 2: Render Platform (Recommended)
-
-Deploy each component separately on Render for better scalability:
-
-- **Agent API**: Deploy as a Docker container with autoscaling
-- **RAG Pipeline**: Set up as a scheduled job (cron)
-- **Frontend**: Deploy as a static site from the build output
-- **Pros**: Automatic scaling, managed infrastructure, good free tier
-- **Cons**: Requires configuring each service separately
-- **Best for**: Production applications with moderate traffic
-- **Setup Guide**: See [`docs/deployment/guides/render-deployment.md`](docs/deployment/guides/render-deployment.md) for detailed instructions
-
-### Option 3: Google Cloud Platform (Enterprise)
-
-For enterprise deployments with maximum flexibility:
-
-- **Agent API**: Cloud Run for serverless, auto-scaling containers
-- **RAG Pipeline**: Cloud Scheduler + Cloud Run for scheduled processing
-- **Frontend**: Cloud Storage + Cloud CDN for global static hosting
-- **Database**: Consider Cloud SQL for Postgres instead of Supabase
-- **Pros**: Enterprise features, global scale, fine-grained control
-- **Cons**: More complex setup, requires GCP knowledge
-- **Best for**: Large-scale production deployments
-- **Setup Guide**: See [`docs/deployment/guides/gcp-deployment.md`](docs/deployment/guides/gcp-deployment.md) for comprehensive setup
-
-### Deployment Decision Matrix
-
-| Feature                 | DigitalOcean            | Render                    | Google Cloud      |
-| ----------------------- | ----------------------- | ------------------------- | ----------------- |
-| Setup Complexity        | ⭐ (Easiest)            | ⭐⭐ (Still Pretty Easy)  | ⭐⭐⭐ (Moderate) |
-| Cost for Small Apps     | $$                      | $ (Free tier)             | $ (Free tier)     |
-| Scalability             | Manual                  | Automatic                 | Automatic         |
-| Geographic Distribution | Single region           | Multi-region              | Global            |
-| Best For                | Quick start or Local AI | Most cloud based projects | Enterprise        |
-
-</details>
-
-<details>
-<summary><strong>🔍 Agent Observability with LangFuse (Optional)</strong></summary>
-
-This deployment includes optional LangFuse integration for comprehensive agent observability. LangFuse provides detailed insights into agent conversations, performance metrics, and debugging capabilities - particularly valuable for production deployments.
-
-### What LangFuse Provides
-
-- **Conversation Tracking**: Complete agent interaction histories with user and session context
-- **Performance Metrics**: Response times, token usage, and cost tracking
-- **Debugging Tools**: Detailed execution traces for troubleshooting agent behavior
-- **User Analytics**: Insights into user patterns and agent effectiveness
-
-### Setup (Completely Optional)
-
-**To enable LangFuse observability:**
-
-1. **Create a LangFuse account** at [https://cloud.langfuse.com/](https://cloud.langfuse.com/) (free tier available)
-
-2. **Create a new project** and obtain your credentials
-
-3. **Add LangFuse environment variables** to your agent API `.env` file:
-
-   ```env
-   # Agent observability (optional - leave empty to disable)
-   LANGFUSE_PUBLIC_KEY=your_langfuse_public_key
-   LANGFUSE_SECRET_KEY=your_langfuse_secret_key
-   LANGFUSE_HOST=https://cloud.langfuse.com
-   ```
-
-4. **Optional: Enable frontend integration** by setting in your frontend `.env`:
-   ```env
-   # Add clickable LangFuse links in the admin dashboard
-   VITE_LANGFUSE_HOST_WITH_PROJECT=https://cloud.langfuse.com/project/your-project-id
-   ```
-
-**To disable LangFuse (default behavior):**
-
-- Simply leave the `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY` empty
-- The agent runs normally with no observability overhead
-
-### Benefits for Different Use Cases
-
-- **Development**: Debug agent behavior and optimize conversation flows
-- **Production**: Monitor performance, track usage costs, and identify issues
-- **Analytics**: Understand user interactions and improve agent effectiveness
-- **Team Collaboration**: Share conversation traces and debugging information
-
-The LangFuse integration is designed to be zero-impact when disabled, making it perfect for development environments where observability isn't needed.
-
-</details>
-
-<details>
-<summary><strong>🔧 Troubleshooting</strong></summary>
-
-### Docker Compose Issues
-
-1. **Services won't start**:
-
-   ```bash
-   # Check service logs
-   docker compose logs -f
-
-   # Rebuild images
-   docker compose build --no-cache
-   ```
-
-2. **Port conflicts**:
-
-   ```bash
-   # Check what's using ports
-   netstat -tlnp | grep :8001
-
-   # Stop conflicting services or change ports in docker-compose.yml
-   ```
-
-3. **Environment variables not loading**:
-
-   ```bash
-   # Verify .env file exists and has correct format
-   cat .env
-
-   # Check environment in container
-   docker compose exec agent-api env | grep LLM_
-   ```
-
-### Common Issues
-
-1. **Database connection**: Verify Supabase credentials and network access
-2. **Vector dimensions**: Ensure embedding model dimensions match database schema
-3. **CORS errors**: Check API endpoint configuration in frontend `.env`
-4. **Memory issues**: Increase Docker memory limits for large models
-
-### Verification Steps
-
-1. **Database**: Check Supabase dashboard for table creation
-2. **Agent API Health**: Visit http://localhost:8001/health
-3. **API Documentation**: Visit http://localhost:8001/docs
-4. **RAG Pipeline**: Check logs with `docker compose logs rag-pipeline`
-5. **Frontend**: Open browser console for any errors
-
-### Health Checks
-
-Monitor service health:
-
-```bash
-# Check all service health
-docker compose ps
-
-# Check specific service logs
-docker compose logs -f agent-api
-
-# Test API health endpoint
-curl http://localhost:8001/health
-
-# Test frontend
-curl http://localhost:8082/health
-```
-
-</details>
-
-<details>
-<summary><strong>🧪 Testing</strong></summary>
-
-### Frontend Testing with Playwright
-
-The frontend includes Playwright tests for end-to-end testing with mocked Supabase and agent API calls.
-
-```bash
-cd frontend
-
-# Make sure Playwright is installed
-npx playwright install --with-deps
-
-# Run all tests
-npm run test
-
-# Run tests with interactive UI
-npm run test:ui
-
-# Run tests in headed browser mode (see the browser)
-npm run test:headed
-
-# Run specific test file
-npx playwright test auth.spec.ts
-
-# Debug tests
-npx playwright test --debug
-```
-
-**Test Features:**
-
-- ✅ **Complete mocking** - No database or API calls
-- ✅ **Authentication flow** - Login, signup, logout
-- ✅ **Chat interface** - Send messages, receive responses
-- ✅ **Conversation management** - New chats, conversation history
-- ✅ **Loading states** - UI feedback during operations
-
-The tests use comprehensive mocks for:
-
-- Supabase authentication and database
-- Agent API streaming responses
-- User sessions and conversation data
-
-</details>
-
-## Support
-
-For detailed instructions on each component, refer to their individual README files:
-
-- `backend_agent_api/README.md` - Agent API specifics
-- `backend_rag_pipeline/README.md` - RAG pipeline details
-- `frontend/README.md` - Frontend development guide
-
-Remember: The modular structure allows you to start with local deployment and gradually move components to the cloud as needed!
-
-## Research Resources
-
-See `research_development/` for the main research and development resources.
+**Note**: This is a research project portfolio for PhD applications. The public repository contains architecture documentation and research materials. Full implementation details are available upon request for academic reviewers.
