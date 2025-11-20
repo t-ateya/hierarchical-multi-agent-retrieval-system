@@ -22,27 +22,27 @@ $RepoRoot = Get-Location
 
 # Check if we're in a git repository
 if (-not (Test-Path ".git")) {
-    Write-Host "❌ Error: Not in a git repository" -ForegroundColor Red
+    Write-Host "[ERROR] Not in a git repository" -ForegroundColor Red
     exit 1
 }
 
 # Verify remote exists
 $RemoteUrl = git remote get-url $Remote 2>$null
 if (-not $RemoteUrl) {
-    Write-Host "❌ Error: Remote '$Remote' not found" -ForegroundColor Red
+    Write-Host "[ERROR] Remote '$Remote' not found" -ForegroundColor Red
     Write-Host "Available remotes:" -ForegroundColor Yellow
     git remote -v
     exit 1
 }
 
-Write-Host "`n🔍 Detected remote: $Remote" -ForegroundColor Cyan
+Write-Host "`n[INFO] Detected remote: $Remote" -ForegroundColor Cyan
 Write-Host "   URL: $RemoteUrl" -ForegroundColor Gray
 
 # Determine if this is public (origin) or private
 $IsPublic = $Remote -eq "origin"
 
 if ($IsPublic) {
-    Write-Host "`n📋 PUBLIC REPOSITORY MODE" -ForegroundColor Yellow
+    Write-Host "`n[MODE] PUBLIC REPOSITORY MODE" -ForegroundColor Yellow
     Write-Host "   Will exclude implementation code directories" -ForegroundColor Gray
     
     # Directories to exclude from public repo
@@ -76,7 +76,7 @@ if ($IsPublic) {
         "smart-push.ps1"
     )
     
-    Write-Host "`n🧹 Removing implementation code from staging..." -ForegroundColor Cyan
+    Write-Host "`n[CLEANUP] Removing implementation code from staging..." -ForegroundColor Cyan
     
     # Remove directories
     foreach ($Dir in $ExcludeDirs) {
@@ -109,34 +109,34 @@ if ($IsPublic) {
         }
     }
     
-    Write-Host "`n✅ Public repo cleanup complete" -ForegroundColor Green
+    Write-Host "`n[SUCCESS] Public repo cleanup complete" -ForegroundColor Green
     
 } else {
-    Write-Host "`n📋 PRIVATE REPOSITORY MODE" -ForegroundColor Green
+    Write-Host "`n[MODE] PRIVATE REPOSITORY MODE" -ForegroundColor Green
     Write-Host "   Will include all files (full implementation)" -ForegroundColor Gray
 }
 
 # Show what will be pushed
-Write-Host "`n📦 Staged changes:" -ForegroundColor Cyan
+Write-Host "`n[STATUS] Staged changes:" -ForegroundColor Cyan
 git status --short
 
 # Confirm before pushing
-Write-Host "`n❓ Push to $Remote/$Branch? (y/N): " -ForegroundColor Yellow -NoNewline
+Write-Host "`n[PROMPT] Push to $Remote/$Branch? (y/N): " -ForegroundColor Yellow -NoNewline
 $Confirm = Read-Host
 
 if ($Confirm -ne "y" -and $Confirm -ne "Y") {
-    Write-Host "`n❌ Push cancelled" -ForegroundColor Red
+    Write-Host "`n[CANCELLED] Push cancelled" -ForegroundColor Red
     exit 0
 }
 
 # Stage all remaining changes (in case of new files)
-Write-Host "`n📝 Staging all changes..." -ForegroundColor Cyan
+Write-Host "`n[STAGE] Staging all changes..." -ForegroundColor Cyan
 git add -A
 
 # Commit if there are changes
 $Status = git status --porcelain
 if ($Status) {
-    Write-Host "`n💾 Committing changes..." -ForegroundColor Cyan
+    Write-Host "`n[COMMIT] Committing changes..." -ForegroundColor Cyan
     $CommitMsg = if ($IsPublic) { 
         "docs(public): update documentation and research materials" 
     } else { 
@@ -144,17 +144,17 @@ if ($Status) {
     }
     git commit -m $CommitMsg
 } else {
-    Write-Host "`nℹ️  No changes to commit" -ForegroundColor Gray
+    Write-Host "`n[INFO] No changes to commit" -ForegroundColor Gray
 }
 
 # Push to remote
-Write-Host "`n🚀 Pushing to $Remote/$Branch..." -ForegroundColor Cyan
+Write-Host "`n[PUSH] Pushing to $Remote/$Branch..." -ForegroundColor Cyan
 git push $Remote $Branch
 
 if ($LASTEXITCODE -eq 0) {
-    Write-Host "`n✅ Successfully pushed to $Remote/$Branch" -ForegroundColor Green
+    Write-Host "`n[SUCCESS] Successfully pushed to $Remote/$Branch" -ForegroundColor Green
 } else {
-    Write-Host "`n❌ Push failed" -ForegroundColor Red
+    Write-Host "`n[ERROR] Push failed" -ForegroundColor Red
     exit 1
 }
 
