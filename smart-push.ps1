@@ -1,0 +1,197 @@
+# =============================================================================
+# Smart Push Script - Auto-detects remote and excludes code for public repo
+# =============================================================================
+# 
+# Usage: .\smart-push.ps1 [remote] [branch]
+#   - remote: 'origin' (public) or 'private' (default: 'origin')
+#   - branch: branch name (default: 'main')
+#
+# Examples:
+#   .\smart-push.ps1                    # Push to origin (public) - excludes code
+#   .\smart-push.ps1 origin main        # Push to origin (public) - excludes code
+#   .\smart-push.ps1 private main        # Push to private - includes everything
+# =============================================================================
+
+param(
+    [string]$Remote = "origin",
+    [string]$Branch = "main"
+)
+
+# Get current directory
+$RepoRoot = Get-Location
+
+# Check if we're in a git repository
+if (-not (Test-Path ".git")) {
+    Write-Host "[ERROR] Not in a git repository" -ForegroundColor Red
+    exit 1
+}
+
+# Verify remote exists
+$RemoteUrl = git remote get-url $Remote 2>$null
+if (-not $RemoteUrl) {
+    Write-Host "[ERROR] Remote '$Remote' not found" -ForegroundColor Red
+    Write-Host "Available remotes:" -ForegroundColor Yellow
+    git remote -v
+    exit 1
+}
+
+Write-Host "`n[INFO] Detected remote: $Remote" -ForegroundColor Cyan
+Write-Host "   URL: $RemoteUrl" -ForegroundColor Gray
+
+# Determine if this is public (origin) or private
+$IsPublic = $Remote -eq "origin"
+
+# Directories to exclude from public repo
+$ExcludeDirs = @(
+    "backend_agent_api",
+    "backend_rag_pipeline", 
+    "frontend",
+    "sql",
+    ".devcontainer",
+    "PRPs",
+    "docs/academic",
+    "docs/project"
+)
+
+# Files to exclude from public repo
+$ExcludeFiles = @(
+    ".cursorrules",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "AI_ASSISTANT_SETUP.md",
+    "HUMAN_REPO_GUIDELINES.md",
+    ".gitignore-public",
+    "CLEAN_PUBLIC_REPO.bat",
+    "REMOVE_CODE_FROM_PUBLIC.bat",
+    "README-PUBLIC.md",
+    "Caddyfile",
+    "caddy-addon.conf",
+    "deploy.py",
+    "docker-compose.yml",
+    "docker-compose.caddy.yml",
+    "smart-push.ps1"
+)
+
+if ($IsPublic) {
+    Write-Host "`n[MODE] PUBLIC REPOSITORY MODE" -ForegroundColor Yellow
+    Write-Host "   Will exclude implementation code directories" -ForegroundColor Gray
+    
+    Write-Host "`n[CLEANUP] Removing implementation code from staging..." -ForegroundColor Cyan
+    
+    # Remove directories
+    foreach ($Dir in $ExcludeDirs) {
+        if (Test-Path $Dir) {
+            $Tracked = git ls-files $Dir 2>$null
+            if ($Tracked) {
+                Write-Host "   Removing: $Dir/" -ForegroundColor Gray
+                git rm -r --cached $Dir 2>$null | Out-Null
+            }
+        }
+    }
+    
+    # Remove files
+    foreach ($File in $ExcludeFiles) {
+        if (Test-Path $File) {
+            $Tracked = git ls-files $File 2>$null
+            if ($Tracked) {
+                Write-Host "   Removing: $File" -ForegroundColor Gray
+                git rm --cached $File 2>$null | Out-Null
+            }
+        }
+    }
+    
+    # Remove .claude directory if it exists
+    if (Test-Path ".claude") {
+        $Tracked = git ls-files .claude 2>$null
+        if ($Tracked) {
+            Write-Host "   Removing: .claude/" -ForegroundColor Gray
+            git rm -r --cached .claude 2>$null | Out-Null
+        }
+    }
+    
+    Write-Host "`n[SUCCESS] Public repo cleanup complete" -ForegroundColor Green
+    
+    # Check if there are removals to commit
+    $Removals = git status --porcelain | Select-String "^D "
+    if ($Removals) {
+        Write-Host "`n[COMMIT] Committing removals..." -ForegroundColor Cyan
+        git commit -m "fix(public): remove implementation code and private documents" 2>&1 | Out-Null
+    }
+    
+} else {
+    Write-Host "`n[MODE] PRIVATE REPOSITORY MODE" -ForegroundColor Green
+    Write-Host "   Will include all files (full implementation)" -ForegroundColor Gray
+}
+
+# Show what will be pushed
+Write-Host "`n[STATUS] Current changes:" -ForegroundColor Cyan
+git status --short
+
+# Confirm before pushing
+Write-Host "`n[PROMPT] Push to $Remote/$Branch? (y/N): " -ForegroundColor Yellow -NoNewline
+$Confirm = Read-Host
+
+if ($Confirm -ne "y" -and $Confirm -ne "Y") {
+    Write-Host "`n[CANCELLED] Push cancelled" -ForegroundColor Red
+    exit 0
+}
+
+# For public repo, only stage allowed files (not using git add -A to avoid re-adding removed files)
+if ($IsPublic) {
+    Write-Host "`n[STAGE] Staging allowed files only..." -ForegroundColor Cyan
+    # Only stage documentation and allowed files
+    git add docs/structure/ research_development/ README.md .gitignore .env.example .gitattributes 2>&1 | Out-Null
+    # Stage any new markdown files in root (but not excluded ones)
+    $NewMdFiles = git ls-files --others --exclude-standard *.md 2>$null
+    if ($NewMdFiles) {
+        foreach ($File in $NewMdFiles) {
+            $ShouldExclude = $false
+            foreach ($Exclude in $ExcludeFiles) {
+                if ($File -eq $Exclude) {
+                    $ShouldExclude = $true
+                    break
+                }
+            }
+            if (-not $ShouldExclude) {
+                git add $File 2>&1 | Out-Null
+            }
+        }
+    }
+    # Remove any accidentally staged excluded files
+    foreach ($Dir in $ExcludeDirs) {
+        git reset HEAD $Dir 2>&1 | Out-Null
+    }
+    foreach ($File in $ExcludeFiles) {
+        git reset HEAD $File 2>&1 | Out-Null
+    }
+} else {
+    # For private repo, stage everything
+    Write-Host "`n[STAGE] Staging all changes..." -ForegroundColor Cyan
+    git add -A
+}
+
+# Commit if there are changes
+$Status = git status --porcelain
+if ($Status) {
+    Write-Host "`n[COMMIT] Committing changes..." -ForegroundColor Cyan
+    $CommitMsg = if ($IsPublic) { 
+        "docs(public): update documentation and research materials" 
+    } else { 
+        "feat: update implementation code" 
+    }
+    git commit -m $CommitMsg
+} else {
+    Write-Host "`n[INFO] No changes to commit" -ForegroundColor Gray
+}
+
+# Push to remote
+Write-Host "`n[PUSH] Pushing to $Remote/$Branch..." -ForegroundColor Cyan
+git push $Remote $Branch
+
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "`n[SUCCESS] Successfully pushed to $Remote/$Branch" -ForegroundColor Green
+} else {
+    Write-Host "`n[ERROR] Push failed" -ForegroundColor Red
+    exit 1
+}
+

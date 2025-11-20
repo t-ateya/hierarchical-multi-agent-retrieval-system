@@ -8,12 +8,10 @@
 
 **📄 For Academic Reviewers**:
 
-- **Research Statement**: See [`docs/academic/research.md`](./docs/academic/research.md) for detailed technical analysis and research contributions
-- **Key Files**:
-  - [`backend_agent_api/agent.py`](./backend_agent_api/agent.py) - Agent orchestration with sub-agent delegation (structure only)
-  - [`backend_agent_api/tools.py`](./backend_agent_api/tools.py) - Tool implementations (structure only)
-  - [`backend_agent_api/agent_api.py`](./backend_agent_api/agent_api.py) - Production API structure
-  - [`backend_rag_pipeline/`](./backend_rag_pipeline/) - Document processing pipeline structure
+- **Research Statement**: See [`docs/structure/PROJECT_STRUCTURE.md`](./docs/structure/PROJECT_STRUCTURE.md) for detailed technical analysis and research contributions
+- **Key Documentation**:
+  - [`docs/structure/DIRECTORY_STRUCTURE.md`](./docs/structure/DIRECTORY_STRUCTURE.md) - Complete project structure
+  - [`docs/structure/PROJECT_STRUCTURE.md`](./docs/structure/PROJECT_STRUCTURE.md) - System architecture and design
 
 **🎓 Research Contributions**:
 
@@ -26,8 +24,6 @@
 **📧 Academic Contact**: ateyaterence@gmail.com | CS PhD Applications Fall 2026
 
 **🔒 Full Implementation**: Available upon request for academic reviewers. Contact ateyaterence@gmail.com for access to the complete codebase.
-
----
 
 # Hierarchical Multi-Agent Retrieval System
 
@@ -46,16 +42,12 @@ This repository contains a production-ready hierarchical multi-agent system with
 
 ### Quick Links
 
-- **[Research Overview](./docs/academic/research.md)** - Main research document and technical analysis
-- **[Getting Started](./docs/project/START_HERE.md)** - Project overview and navigation guide
 - **[Project Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** - Complete directory structure
-- **[Agent Architecture](./docs/academic/AGENTS.md)** - Multi-agent system architecture
+- **[System Architecture](./docs/structure/PROJECT_STRUCTURE.md)** - System architecture and design
 - **[Deployment Guides](./docs/deployment/guides/)** - Platform-specific deployment instructions
 
 ### Documentation Structure
 
-- **Academic Documentation** (`docs/academic/`) - Research methodology, architecture, and development processes
-- **Project Documentation** (`docs/project/`) - Setup guides, project overview, and submission materials
 - **Structure Documentation** (`docs/structure/`) - Directory structure and organization
 - **Deployment Documentation** (`docs/deployment/`) - Deployment guides for various platforms
 
