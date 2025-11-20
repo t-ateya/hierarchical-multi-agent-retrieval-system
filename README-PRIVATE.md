@@ -117,6 +117,6 @@ The complete codebase with full implementation details, test suites, and deploym
 
 ## 📄 License
 
-This repository is maintained for academic review purposes. All rights reserved.
+This repository is for academic review purposes. All rights reserved.
 
 **Note**: This is a research project portfolio for PhD applications. The public repository contains architecture documentation and research materials. Full implementation details are available upon request for academic reviewers.
