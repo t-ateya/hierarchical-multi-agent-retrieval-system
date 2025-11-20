@@ -5,7 +5,7 @@
 ### **Research Portfolio for PhD Applications (Fall 2026)**
 
 [![Status](https://img.shields.io/badge/Status-Academic%20Review-2563eb?style=for-the-badge)]()
-[![Contact](https://img.shields.io/badge/Contact-ateyaterence%40gmail.com-059669?style=for-the-badge)](mailto:ateyaterence@gmail.com)
+[![Contact](https://img.shields.io/badge/Contact-tateya%40uco.edu-059669?style=for-the-badge)](mailto:tateya@uco.edu)
 [![Research](https://img.shields.io/badge/Research-Multi--Agent%20Systems-ea580c?style=for-the-badge)](./docs/structure/ARCHITECTURE.md)
 
 _A production-validated hierarchical multi-agent system demonstrating research capabilities in multi-agent coordination, retrieval-augmented generation, and production-scale ML systems engineering_
@@ -43,7 +43,6 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 | :-------------------: | :----------------------------------------------------------------------- |
 | **🔬 Research Focus** | Hierarchical multi-agent coordination for scalable information retrieval |
 | **💡 Key Innovation** | Hybrid RAG combining vector search, SQL generation, and vision analysis  |
-|     **📊 Scale**      | 1M+ documents processed in production deployment                         |
 |   **✅ Validation**   | Zero security incidents in production deployment                         |
 |     **🏗️ Status**     | Production-validated system with full-stack deployment                   |
 |     **🔒 Access**     | Architecture public; implementation available upon request               |
@@ -54,11 +53,11 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 
 <div align="center">
 
-|     🏆 Achievement      |      📊 Scale       |        🔬 Innovation        |
-| :---------------------: | :-----------------: | :-------------------------: |
-|  Production Deployment  |    1M+ Documents    |  Hierarchical Multi-Agent   |
-| Zero Security Incidents | Real-time Streaming |   Hybrid RAG Architecture   |
-|    Full-Stack System    | Token-Based Billing | Episodic Memory Integration |
+|     🏆 Achievement      |        🔬 Innovation        |
+| :---------------------: | :-------------------------: |
+|  Production Deployment  |  Hierarchical Multi-Agent   |
+| Zero Security Incidents |   Hybrid RAG Architecture   |
+|    Full-Stack System    | Episodic Memory Integration |
 
 </div>
 
@@ -66,9 +65,9 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 
 ## 📋 Abstract
 
-This repository presents a **hierarchical multi-agent system** for scalable information retrieval over educational curricula. The system addresses fundamental challenges in multi-agent coordination—specifically, **maintaining semantic coherence across distributed agent interactions** while preserving task decomposition efficiency at scale.
+This repository presents a **hierarchical multi-agent system** for scalable information retrieval from heterogeneous document sources. The system addresses fundamental challenges in multi-agent coordination—specifically, **maintaining semantic coherence across distributed agent interactions** while preserving task decomposition efficiency.
 
-Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the system demonstrates practical solutions to theoretical problems in agent-based information retrieval, validated with **1M+ documents processed** in production deployment.
+Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the system demonstrates practical solutions to theoretical problems in agent-based information retrieval, validated through production deployment with real users.
 
 ### Research Questions Addressed
 
@@ -88,7 +87,7 @@ Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the
 
 ### Applicant Information
 
-**Name:** Ateya Terence
+**Name:** T Ateya
 
 **Background:** ML Engineer (7+ yrs)
 
@@ -118,7 +117,7 @@ Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the
 
 The complete implementation codebase is maintained in a **private repository** (`hierarchical-multi-agent-retrieval-system-impl`) for IP protection during applications.
 
-**To request access**, email **ateyaterence@gmail.com** with:
+**To request access**, email **tateya@uco.edu** with:
 
 1. Academic affiliation and position
 2. Purpose of review (e.g., PhD application evaluation)
@@ -146,9 +145,9 @@ The complete implementation codebase is maintained in a **private repository** (
 <tr>
 <td><strong>Implementation</strong></td>
 <td>
-• Primary orchestrator manages task decomposition and response synthesis<br>
-• Specialized sub-agents for vision analysis, language processing, and tool execution<br>
-• Context propagation mechanisms preserving semantic continuity across agent boundaries
+• Primary orchestrator coordinates specialized sub-agents for vision analysis, summarization, document retrieval, SQL query generation, and safe code execution<br>
+• Context propagation mechanisms preserving semantic continuity across agent boundaries<br>
+• Hierarchical delegation pattern maintaining global context coherence
 </td>
 </tr>
 <tr>
@@ -162,7 +161,7 @@ The complete implementation codebase is maintained in a **private repository** (
 <table>
 <tr>
 <td width="20%"><strong>Challenge</strong></td>
-<td>Single-modality retrieval systems fail to capture diverse information needs in educational contexts requiring conceptual understanding, precise facts, and visual comprehension.</td>
+<td>Single-modality retrieval systems fail to capture diverse information needs requiring conceptual understanding, precise facts, and visual comprehension across heterogeneous document types.</td>
 </tr>
 <tr>
 <td><strong>Contribution</strong></td>
@@ -171,16 +170,17 @@ The complete implementation codebase is maintained in a **private repository** (
 <tr>
 <td><strong>Implementation</strong></td>
 <td>
-<strong>Semantic Search:</strong> Dense vector retrieval for conceptual similarity<br>
-<strong>Structured Queries:</strong> SQL generation for precise factual extraction<br>
+<strong>Semantic Search:</strong> Dense vector retrieval (pgvector) for conceptual similarity<br>
+<strong>Structured Queries:</strong> Read-only SQL tools for structured data analysis<br>
 <strong>Multimodal Understanding:</strong> Vision analysis for diagram/image comprehension<br>
-• Unified query routing mechanism selecting optimal retrieval strategy<br>
-• Multi-source document ingestion (Google Drive, local filesystem)
+• Hybrid retrieval pipeline over Supabase/PostgreSQL with pgvector<br>
+• Multi-source document ingestion (Google Drive API, local filesystem)<br>
+• Semantic chunking with configurable size
 </td>
 </tr>
 <tr>
 <td><strong>Validation</strong></td>
-<td>Successfully processes <strong>1M+ educational documents</strong> with diverse content types (text, tables, diagrams, images).</td>
+<td>Successfully processes diverse document types (text, tables, diagrams, images) from multiple sources (Google Drive, local filesystem) with unified retrieval framework.</td>
 </tr>
 </table>
 
@@ -199,7 +199,8 @@ The complete implementation codebase is maintained in a **private repository** (
 <td><strong>Implementation</strong></td>
 <td>
 • Mem0-based memory architecture with semantic indexing<br>
-• Session-aware memory retrieval with temporal decay modeling<br>
+• Long-term, user-specific memory integrated into agent loop<br>
+• Conversation context maintained across sessions while preserving user isolation<br>
 • Privacy-preserving memory isolation per user (RLS policies)
 </td>
 </tr>
@@ -214,7 +215,7 @@ The complete implementation codebase is maintained in a **private repository** (
 <table>
 <tr>
 <td width="20%"><strong>Challenge</strong></td>
-<td>Agent-generated code execution poses significant security risks in production environments, particularly with user-facing educational applications.</td>
+<td>Agent-generated code execution poses significant security risks in production environments, particularly with user-facing applications requiring safe execution.</td>
 </tr>
 <tr>
 <td><strong>Contribution</strong></td>
@@ -244,10 +245,11 @@ The complete implementation codebase is maintained in a **private repository** (
 <tr>
 <td><strong>Implementation</strong></td>
 <td>
-• User authentication and authorization (Row-Level Security)<br>
-• Token-based billing system (Stripe integration)<br>
-• Real-time streaming with Server-Sent Events (SSE)<br>
-• Observability infrastructure (Langfuse monitoring)<br>
+• JWT authentication (Supabase)<br>
+• Stripe-based billing system<br>
+• Server-Sent Events (SSE) streaming<br>
+• Docker-based deployment<br>
+• Observability using LangFuse<br>
 • Modular architecture supporting independent component scaling
 </td>
 </tr>
@@ -376,13 +378,13 @@ The complete implementation codebase is maintained in a **private repository** (
 
 <div align="center">
 
-|           Metric           |        Value         |                         Context                         |
-| :------------------------: | :------------------: | :-----------------------------------------------------: |
-| **📚 Documents Processed** |       **1M+**        | Educational curriculum materials (text, images, tables) |
-|  **⚡ Response Latency**   |    **Real-time**     |              Server-Sent Events streaming               |
-|   **💰 Billing System**    |   **Token-based**    |         Stripe integration with usage tracking          |
-| **🛡️ Security Incidents**  |        **0**         |            Across full production deployment            |
-|  **📈 Deployment Status**  | **Production-ready** |          With authentication and observability          |
+|          Metric           |        Value         |                            Context                             |
+| :-----------------------: | :------------------: | :------------------------------------------------------------: |
+|  **📚 Document Sources**  |   **Multi-source**   | Google Drive API and local filesystem (PDF, CSV, images, text) |
+|  **⚡ Response Latency**  |    **Real-time**     |                  Server-Sent Events streaming                  |
+|   **💰 Billing System**   |   **Token-based**    |             Stripe integration with usage tracking             |
+| **🛡️ Security Incidents** |        **0**         |               Across full production deployment                |
+| **📈 Deployment Status**  | **Production-ready** |             With authentication and observability              |
 
 </div>
 
@@ -401,7 +403,7 @@ Production   Hierarchical  Production    Real-world  Continuous
 
 ### Methodology Steps
 
-1. **Problem Identification** — Challenges in multi-agent coordination emerged from production needs in educational AI systems
+1. **Problem Identification** — Challenges in multi-agent coordination emerged from production needs in autonomous agent systems
 
 2. **Architectural Design** — Hierarchical patterns designed to address semantic coherence preservation
 
@@ -507,9 +509,9 @@ This work is being prepared for submission to relevant venues in multi-agent sys
 
 ### Quick Contact
 
-**Ateya Terence** | ML Engineer | PhD Applicant (Fall 2026)
+**T Ateya** | ML Engineer | PhD Applicant (Fall 2026)
 
-[📧 Email](mailto:ateyaterence@gmail.com) • [🔗 LinkedIn](https://linkedin.com/in/ateya-terence)
+[📧 Academic Email](mailto:tateya@uco.edu) • [📧 Company Email](mailto:softbrickstech@gmail.com) • [🔗 LinkedIn](https://linkedin.com/in/ateya-terence)
 
 **Response Time:** 24-48 hours | **Subject:** `PhD Application - Multi-Agent Systems Research`
 
@@ -521,13 +523,15 @@ This work is being prepared for submission to relevant venues in multi-agent sys
 
 ### Applicant Information
 
-**Ateya Terence**
+**T Ateya**
 
 Machine Learning Engineer
 
 PhD Applicant (Fall 2026)
 
-📧 **Email:** ateyaterence@gmail.com
+📧 **Academic Email:** tateya@uco.edu
+
+📧 **Company Email:** softbrickstech@gmail.com
 
 📍 **Location:** Oklahoma City, OK, USA
 
@@ -576,7 +580,7 @@ This research was developed independently as part of PhD application portfolio d
 
 **Core Technologies:** Pydantic AI, LangChain, FastAPI, React, Supabase, Mem0, Langfuse
 
-**Special Thanks:** To educators and students in Cameroon whose needs and feedback shaped the educational focus and real-world validation of this research.
+**Special Thanks:** To the open-source communities and frameworks that enabled this research.
 
 ---
 
