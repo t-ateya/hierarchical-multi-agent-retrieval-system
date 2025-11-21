@@ -2,7 +2,7 @@
 
 # Hierarchical Multi-Agent Retrieval System
 
-### **Research Portfolio for PhD Applications (Fall 2026)**
+### **Research Artifact for PhD Applications in Multi-Agent Systems (Fall 2026)**
 
 [![Status](https://img.shields.io/badge/Status-Academic%20Review-2563eb?style=for-the-badge)]()
 [![Contact](https://img.shields.io/badge/Contact-tateya%40uco.edu-059669?style=for-the-badge)](mailto:tateya@uco.edu)
@@ -10,32 +10,34 @@
 
 _A production-validated hierarchical multi-agent system demonstrating research capabilities in multi-agent coordination, retrieval-augmented generation, and production-scale ML systems engineering_
 
+> **Academic note:** This repository exposes the **architecture, research framing, and documentation** of a hierarchical multi-agent retrieval system. The **full implementation codebase** is maintained in a private companion repository and is available **exclusively for academic review** upon request (see Contact and Implementation Access Protocol below).
+
 ---
 
-**Quick Navigation:** [📖 Architecture](./docs/structure/ARCHITECTURE.md) • [📂 Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [🚀 Deployment](./docs/deployment/guides/) • [📧 Contact](#-contact)
+**Quick Navigation:** [📖 Architecture](./docs/structure/ARCHITECTURE.md) • [📂 Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [🚀 Deployment](./docs/deployment/guides/) • [📧 Contact](#contact)
 
 </div>
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
-- [Quick Overview](#-quick-overview)
-- [Abstract](#-abstract)
-- [For Academic Reviewers](#-for-academic-reviewers)
-- [Research Contributions](#-research-contributions)
-- [System Architecture](#️-system-architecture)
-- [Performance Metrics](#-performance-metrics)
-- [Research Methodology](#-research-methodology)
-- [Future Research Directions](#-future-research-directions)
-- [Documentation Structure](#-documentation-structure)
-- [Publications & Presentations](#-publications--presentations)
-- [Contact](#-contact)
-- [License & Usage](#️-license--usage)
+- [Quick Overview](#quick-overview)
+- [Abstract](#abstract)
+- [For Academic Reviewers](#for-academic-reviewers)
+- [Research Contributions](#research-contributions)
+- [System Architecture](#system-architecture)
+- [Performance Metrics](#performance-metrics)
+- [Research Methodology](#research-methodology)
+- [Future Research Directions](#future-research-directions)
+- [Documentation Structure](#documentation-structure)
+- [Publications & Presentations](#publications--presentations)
+- [Contact](#contact)
+- [License & Usage](#license--usage)
 
 ---
 
-## ⚡ Quick Overview
+## Quick Overview
 
 <div align="center">
 
@@ -49,7 +51,7 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 
 </div>
 
-### 🎯 Key Highlights
+### Key Highlights
 
 <div align="center">
 
@@ -63,7 +65,7 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 
 ---
 
-## 📋 Abstract
+## Abstract
 
 This repository presents a **hierarchical multi-agent system** for scalable information retrieval from heterogeneous document sources. The system addresses fundamental challenges in multi-agent coordination—specifically, **maintaining semantic coherence across distributed agent interactions** while preserving task decomposition efficiency.
 
@@ -79,7 +81,9 @@ Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the
 
 ---
 
-## 🎓 For Academic Reviewers
+## For Academic Reviewers
+
+This repository is designed to let academic reviewers **verify the claims** made in my research statement and CV regarding architecture, scale, and system capabilities.
 
 <table>
 <tr>
@@ -113,9 +117,9 @@ Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the
 </tr>
 </table>
 
-### 🔒 Implementation Access Protocol
+### Implementation Access Protocol
 
-The complete implementation codebase is maintained in a **private repository** (`hierarchical-multi-agent-retrieval-system-impl`) for IP protection during applications.
+The complete implementation codebase is maintained in a **private companion repository** (`hierarchical-multi-agent-retrieval-system-impl`) for IP protection during applications and is **available for academic review upon request**.
 
 **To request access**, email **tateya@uco.edu** with:
 
@@ -129,7 +133,7 @@ The complete implementation codebase is maintained in a **private repository** (
 
 ---
 
-## 🔬 Research Contributions
+## Research Contributions
 
 ### 1️⃣ Hierarchical Multi-Agent Coordination
 
@@ -261,7 +265,7 @@ The complete implementation codebase is maintained in a **private repository** (
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Technology Stack
 
@@ -374,7 +378,7 @@ The complete implementation codebase is maintained in a **private repository** (
 
 ---
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 <div align="center">
 
@@ -390,7 +394,7 @@ The complete implementation codebase is maintained in a **private repository** (
 
 ---
 
-## 🧪 Research Methodology
+## Research Methodology
 
 This project follows a **research-through-building** methodology, validating theoretical approaches through production deployment:
 
@@ -417,7 +421,7 @@ Production   Hierarchical  Production    Real-world  Continuous
 
 ---
 
-## 🔮 Future Research Directions
+## Future Research Directions
 
 This project establishes foundations for research directions I aim to pursue in doctoral studies:
 
@@ -446,7 +450,7 @@ This project establishes foundations for research directions I aim to pursue in 
 
 ---
 
-## 📚 Documentation Structure
+## Documentation Structure
 
 <table>
 <tr>
@@ -491,7 +495,7 @@ This project establishes foundations for research directions I aim to pursue in 
 
 ---
 
-## 📝 Publications & Presentations
+## Publications & Presentations
 
 This work is being prepared for submission to relevant venues in multi-agent systems and ML systems engineering. Academic reviewers are welcome to discuss:
 
@@ -503,7 +507,7 @@ This work is being prepared for submission to relevant venues in multi-agent sys
 
 ---
 
-## 📧 Contact
+## Contact
 
 <div align="center">
 
@@ -560,7 +564,7 @@ Research methodology, implementation details, or PhD application materials
 
 ---
 
-## ⚖️ License & Usage
+## License & Usage
 
 **Academic Review License** — This repository is maintained for academic review purposes in support of PhD applications.
 
@@ -574,7 +578,7 @@ The complete implementation is proprietary and maintained in a private repositor
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 This research was developed independently as part of PhD application portfolio development. The work builds upon and integrates several open-source frameworks and technologies:
 
@@ -584,17 +588,19 @@ This research was developed independently as part of PhD application portfolio d
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 
-1. **Review Architecture** → Explore [System Architecture](./docs/structure/ARCHITECTURE.md) diagrams
-2. **Request Access** → Email for private repository access
-3. **Connect** → Reach out for collaboration or questions
+**If you are reviewing my PhD application:**
+
+1. Start with [System Architecture](./docs/structure/ARCHITECTURE.md).
+2. Skim [Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md) to see implementation scope.
+3. Email me to request temporary read access to the private implementation repository, if needed.
 
 ---
 
 <div align="center">
 
-**Ready to explore?** [View Architecture](./docs/structure/ARCHITECTURE.md) • [Request Access](#-contact)
+**Ready to explore?** [View Architecture](./docs/structure/ARCHITECTURE.md) • [Request Access](#contact)
 
 ---
 
@@ -602,7 +608,7 @@ This research was developed independently as part of PhD application portfolio d
 
 **Version:** 1.0.0 (Academic Review)
 
-**Status:** Archived for PhD Applications (Fall 2026)
+**Status:** Frozen snapshot for PhD applications (Fall 2026). Any future extensions will be documented separately.
 
 ---
 

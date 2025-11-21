@@ -409,6 +409,21 @@ local/
 *.local
 
 # =============================================================================
+# 📚 PRIVATE ACADEMIC DOCUMENTATION (PRIVATE REPOSITORY ONLY)
+# =============================================================================
+# These files contain first-person, casual language or application strategy
+# and should NOT be in the public repository
+
+# Private academic documentation with first-person language
+docs/academic/research_readme.md
+docs/academic/APPLICATION_STRATEGY.md
+docs/academic/AGENTS.md
+docs/academic/CLAUDE.md
+
+# Private project documentation
+docs/project/
+
+# =============================================================================
 # 📌 NOTES FOR PUBLIC REPOSITORY
 # =============================================================================
 #

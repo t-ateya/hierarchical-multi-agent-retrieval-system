@@ -219,7 +219,7 @@ And then be sure in your .env file to specify all of the environment variables i
 
 ### Deploy the Local AI Package
 
-Note: Run 'sudo chmod 777 searxng' beforehand to set the right permissions otherwise the Searxng container will restart. I haven't seen this on every provider but this happens with DigitalOcean GPU droplets for some reason.
+**Note:** Run `sudo chmod 777 searxng` beforehand to set the correct permissions; otherwise, the SearXNG container will restart. This issue has been observed specifically with DigitalOcean GPU droplets.
 
 For GPU-enabled deployment:
 
