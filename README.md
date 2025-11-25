@@ -2,38 +2,32 @@
 
 # Hierarchical Multi-Agent Retrieval System
 
-### **Research Artifact for PhD Applications in Multi-Agent Systems (Fall 2026)**
+### Research Artifact for PhD Applications in Multi-Agent Systems (Target: Fall 2026)
 
 [![Status](https://img.shields.io/badge/Status-Academic%20Review-2563eb?style=for-the-badge)]()
 [![Contact](https://img.shields.io/badge/Contact-tateya%40uco.edu-059669?style=for-the-badge)](mailto:tateya@uco.edu)
-[![Research](https://img.shields.io/badge/Research-Multi--Agent%20Systems-ea580c?style=for-the-badge)](./docs/structure/ARCHITECTURE.md)
+[![Research](https://img.shields.io/badge/Research-Multi--Agent%20Retrieval-ea580c?style=for-the-badge)](./docs/structure/ARCHITECTURE.md)
 
-_A production-validated hierarchical multi-agent system demonstrating research capabilities in multi-agent coordination, retrieval-augmented generation, and production-scale ML systems engineering_
+_A hierarchical multi-agent retrieval system demonstrating research capabilities in multi-agent coordination, retrieval-augmented generation, and production-scale ML systems engineering._
 
-> **Academic note:** This repository exposes the **architecture, research framing, and documentation** of a hierarchical multi-agent retrieval system. The **full implementation codebase** is maintained in a private companion repository and is available **exclusively for academic review** upon request (see Contact and Implementation Access Protocol below).
+> **Academic note:** This repository exposes the **architecture**, **research framing**, and **documentation** of the system. The **full implementation codebase** is maintained in a private companion repository and is available **exclusively for academic review** upon request (see [Implementation Access Protocol](#implementation-access-protocol)).
 
 ---
 
-**Quick Navigation:** [📖 Architecture](./docs/structure/ARCHITECTURE.md) • [📂 Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [🚀 Deployment](./docs/deployment/guides/) • [📧 Contact](#contact)
+**Quick Navigation:**  
+[Overview](#quick-overview) • [Abstract](#abstract) • [Architecture](./docs/structure/ARCHITECTURE.md) • [Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [Research Contributions](#research-contributions) • [Contact](#contact)
 
 </div>
 
 ---
 
-## Table of Contents
+## For Busy Academic Reviewers
 
-- [Quick Overview](#quick-overview)
-- [Abstract](#abstract)
-- [For Academic Reviewers](#for-academic-reviewers)
-- [Research Contributions](#research-contributions)
-- [System Architecture](#system-architecture)
-- [Performance Metrics](#performance-metrics)
-- [Research Methodology](#research-methodology)
-- [Future Research Directions](#future-research-directions)
-- [Documentation Structure](#documentation-structure)
-- [Publications & Presentations](#publications--presentations)
-- [Contact](#contact)
-- [License & Usage](#license--usage)
+If you have limited time, a suggested review path is:
+
+1. Read the **[System Architecture](./docs/structure/ARCHITECTURE.md)** (2–3 minutes).
+2. Skim **[Project Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** to gauge implementation scope.
+3. Email me if you would like **temporary read access** to the private implementation repository for deeper technical review.
 
 ---
 
@@ -41,13 +35,13 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 
 <div align="center">
 
-|        Aspect         | Summary                                                                  |
-| :-------------------: | :----------------------------------------------------------------------- |
-| **🔬 Research Focus** | Hierarchical multi-agent coordination for scalable information retrieval |
-| **💡 Key Innovation** | Hybrid RAG combining vector search, SQL generation, and vision analysis  |
-|   **✅ Validation**   | Zero security incidents in production deployment                         |
-|     **🏗️ Status**     | Production-validated system with full-stack deployment                   |
-|     **🔒 Access**     | Architecture public; implementation available upon request               |
+| Aspect                | Summary                                                                      |
+| --------------------- | ---------------------------------------------------------------------------- |
+| 🔬 **Research Focus** | Hierarchical multi-agent coordination for scalable information retrieval     |
+| 💡 **Key Idea**       | Hybrid RAG combining vector search, SQL generation, and vision analysis      |
+| ✅ **Validation**     | Deployed with real users, monitored with observability tooling               |
+| 🏗️ **Status**         | Production-validated system with full-stack implementation                   |
+| 🔒 **Access**         | Architecture and documentation public; implementation available upon request |
 
 </div>
 
@@ -55,11 +49,11 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 
 <div align="center">
 
-|     🏆 Achievement      |        🔬 Innovation        |
-| :---------------------: | :-------------------------: |
-|  Production Deployment  |  Hierarchical Multi-Agent   |
-| Zero Security Incidents |   Hybrid RAG Architecture   |
-|    Full-Stack System    | Episodic Memory Integration |
+| 🏆 Deployment Aspect      | 🔬 Research Capability             |
+| ------------------------- | ---------------------------------- |
+| Production deployment     | Hierarchical multi-agent control   |
+| Safe tool execution       | Hybrid RAG over heterogeneous data |
+| Full-stack implementation | Episodic memory integration        |
 
 </div>
 
@@ -67,23 +61,25 @@ _A production-validated hierarchical multi-agent system demonstrating research c
 
 ## Abstract
 
-This repository presents a **hierarchical multi-agent system** for scalable information retrieval from heterogeneous document sources. The system addresses fundamental challenges in multi-agent coordination—specifically, **maintaining semantic coherence across distributed agent interactions** while preserving task decomposition efficiency.
+This repository documents a **hierarchical multi-agent system** for scalable information retrieval from heterogeneous document sources. The system is designed to address challenges in multi-agent coordination, particularly **maintaining semantic coherence across agent boundaries** while preserving efficiency in task decomposition and retrieval.
 
-Through hierarchical orchestration patterns and hybrid retrieval mechanisms, the system demonstrates practical solutions to theoretical problems in agent-based information retrieval, validated through production deployment with real users.
+Through hierarchical orchestration and hybrid retrieval mechanisms (semantic search, structured queries, and multimodal analysis), the system provides a **practical platform for investigating theoretically motivated questions** in:
 
-### Research Questions Addressed
+- multi-agent coordination,
+- retrieval-augmented generation, and
+- long-term episodic memory in interactive systems.
 
-|   #   | Research Question                                                                                              | Approach                                                                         |
-| :---: | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| **1** | How can hierarchical agent coordination preserve semantic coherence in task decomposition?                     | Hierarchical orchestration with context propagation mechanisms                   |
-| **2** | What hybrid retrieval architectures balance semantic search, structured queries, and multimodal understanding? | Unified framework integrating vector search, SQL generation, and vision analysis |
-| **3** | How do episodic memory systems enhance multi-session conversational coherence?                                 | Long-term memory with semantic indexing and temporal decay modeling              |
+This system serves as the empirical and engineering foundation for my PhD research agenda across multiple institutions. While the precise wording of research questions may vary by program, they center on:
+
+- semantic preservation under hierarchical and hybrid retrieval,
+- communication-efficient multi-agent coordination, and
+- episodic memory integration for multi-session coherence.
 
 ---
 
 ## For Academic Reviewers
 
-This repository is designed to let academic reviewers **verify the claims** made in my research statement and CV regarding architecture, scale, and system capabilities.
+This repository is intended to allow academic reviewers to **verify the technical depth and scope** of the system referenced in my Statement(s) of Purpose and CV.
 
 <table>
 <tr>
@@ -91,15 +87,14 @@ This repository is designed to let academic reviewers **verify the claims** made
 
 ### Applicant Information
 
-**Name:** T Ateya
+**Name:** Terence Ateya
 
-**Background:** AI Systems Engineer & Machine Learning Researcher (7+ yrs)
+**Role:** AI Systems Engineer and Machine Learning Researcher
 
-**Target:** PhD in CS/Data Science
+**PhD Target:** Computer Science / Data Science, Fall 2026
 
-**Timeline:** Fall 2026
-
-**Focus:** Multi-agent systems, scalable information retrieval, ML engineering
+**Research Interests:**  
+Multi-agent systems, scalable information retrieval, retrieval-augmented generation, production ML systems
 
 </td>
 <td width="60%">
@@ -108,510 +103,157 @@ This repository is designed to let academic reviewers **verify the claims** made
 
 | Resource                                                           | Description                                   |
 | ------------------------------------------------------------------ | --------------------------------------------- |
-| **[System Architecture](./docs/structure/ARCHITECTURE.md)**        | High-level architecture with Mermaid diagrams |
-| **[Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** | Complete project organization                 |
-| **[Project Organization](./docs/structure/PROJECT_STRUCTURE.md)**  | Structure rationale and principles            |
-| **[Deployment Guides](./docs/deployment/guides/)**                 | Platform-specific deployment docs             |
+| **[System Architecture](./docs/structure/ARCHITECTURE.md)**        | High-level architecture and workflows         |
+| **[Project Structure](./docs/structure/PROJECT_STRUCTURE.md)**     | Organizational rationale for research context |
+| **[Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** | Full implementation layout                    |
+| **[Deployment Guides](./deployment/guides/)**                      | Platform-specific deployment documentation    |
 
 </td>
 </tr>
 </table>
 
-### Implementation Access Protocol
+---
 
-The complete implementation codebase is maintained in a **private companion repository** (`hierarchical-multi-agent-retrieval-system-impl`) for IP protection during applications and is **available for academic review upon request**.
+## Implementation Access Protocol
 
-**To request access**, email **tateya@uco.edu** with:
+The complete implementation is maintained in a **private companion repository**  
+`hierarchical-multi-agent-retrieval-system-impl`  
+for intellectual property protection during the PhD application cycle.
+
+Academic reviewers may request access for evaluation.
+
+**To request access, please email:** `tateya@uco.edu` with:
 
 1. Academic affiliation and position
-2. Purpose of review (e.g., PhD application evaluation)
-3. Institutional email (for verification)
-4. Preferred timeframe
+2. Purpose of review (for example, PhD application evaluation)
+3. Institutional email address (for verification)
+4. Preferred timeframe (if time-sensitive)
 
-**Subject:** `PhD Application - Multi-Agent Systems Research - Implementation Access`  
-**Response time:** 24-48 hours
+**Suggested subject line:**  
+`PhD Application - Multi-Agent Retrieval System - Implementation Access`
 
 ---
 
 ## Research Contributions
 
-### 1️⃣ Hierarchical Multi-Agent Coordination
+### 1. Hierarchical Multi-Agent Coordination
 
-<table>
-<tr>
-<td width="20%"><strong>Challenge</strong></td>
-<td>Traditional flat multi-agent systems struggle with task decomposition complexity and semantic coherence preservation across distributed interactions.</td>
-</tr>
-<tr>
-<td><strong>Contribution</strong></td>
-<td>Hierarchical orchestration pattern where a primary agent delegates to specialized sub-agents while maintaining global context coherence through explicit context propagation mechanisms.</td>
-</tr>
-<tr>
-<td><strong>Implementation</strong></td>
-<td>
-• Primary orchestrator coordinates specialized sub-agents for vision analysis, summarization, document retrieval, SQL query generation, and safe code execution<br>
-• Context propagation mechanisms preserving semantic continuity across agent boundaries<br>
-• Hierarchical delegation pattern maintaining global context coherence
-</td>
-</tr>
-<tr>
-<td><strong>Validation</strong></td>
-<td>System maintains coherent responses across complex multi-hop queries in production environment.</td>
-</tr>
-</table>
+**Challenge:**  
+Flat multi-agent systems struggle with complex task decomposition and maintaining semantic coherence across multiple agents.
 
-### 2️⃣ Hybrid Retrieval Architecture
+**Contribution:**  
+A hierarchical orchestration pattern where a **primary orchestrator** delegates to specialized sub-agents (vision, language, retrieval, tools) while preserving global context through **explicit context propagation**.
 
-<table>
-<tr>
-<td width="20%"><strong>Challenge</strong></td>
-<td>Single-modality retrieval systems fail to capture diverse information needs requiring conceptual understanding, precise facts, and visual comprehension across heterogeneous document types.</td>
-</tr>
-<tr>
-<td><strong>Contribution</strong></td>
-<td>Unified retrieval framework integrating three complementary modalities with intelligent query routing and coherent result fusion.</td>
-</tr>
-<tr>
-<td><strong>Implementation</strong></td>
-<td>
-<strong>Semantic Search:</strong> Dense vector retrieval (pgvector) for conceptual similarity<br>
-<strong>Structured Queries:</strong> Read-only SQL tools for structured data analysis<br>
-<strong>Multimodal Understanding:</strong> Vision analysis for diagram/image comprehension<br>
-• Hybrid retrieval pipeline over Supabase/PostgreSQL with pgvector<br>
-• Multi-source document ingestion (Google Drive API, local filesystem)<br>
-• Semantic chunking with configurable size
-</td>
-</tr>
-<tr>
-<td><strong>Validation</strong></td>
-<td>Successfully processes diverse document types (text, tables, diagrams, images) from multiple sources (Google Drive, local filesystem) with unified retrieval framework.</td>
-</tr>
-</table>
+**Implementation Highlights:**
 
-### 3️⃣ Production-Scale Episodic Memory
+- Main orchestrator coordinates sub-agents for:
+  - vision analysis
+  - summarization
+  - document retrieval
+  - SQL query generation
+  - safe code execution
+- Context propagation strategies for maintaining coherent multi-step reasoning
+- Hierarchical delegation with clear separation of concerns
 
-<table>
-<tr>
-<td width="20%"><strong>Challenge</strong></td>
-<td>Conversational AI systems lack persistent, queryable memory across sessions, limiting personalization and long-term context utilization.</td>
-</tr>
-<tr>
-<td><strong>Contribution</strong></td>
-<td>Long-term episodic memory system enabling cross-session context persistence and semantically-aware retrieval with privacy preservation.</td>
-</tr>
-<tr>
-<td><strong>Implementation</strong></td>
-<td>
-• Mem0-based memory architecture with semantic indexing<br>
-• Long-term, user-specific memory integrated into agent loop<br>
-• Conversation context maintained across sessions while preserving user isolation<br>
-• Privacy-preserving memory isolation per user (RLS policies)
-</td>
-</tr>
-<tr>
-<td><strong>Validation</strong></td>
-<td>Supports coherent multi-session conversations in production deployment.</td>
-</tr>
-</table>
+**Validation:**  
+Demonstrated coherent responses to multi-hop, multi-modal user queries in real usage scenarios.
 
-### 4️⃣ Safe Tool Orchestration
+---
 
-<table>
-<tr>
-<td width="20%"><strong>Challenge</strong></td>
-<td>Agent-generated code execution poses significant security risks in production environments, particularly with user-facing applications requiring safe execution.</td>
-</tr>
-<tr>
-<td><strong>Contribution</strong></td>
-<td>Secure sandbox execution environment for agent-generated tools with multi-layered validation and resource constraints.</td>
-</tr>
-<tr>
-<td><strong>Implementation</strong></td>
-<td>
-• RestrictedPython sandbox for Python code execution<br>
-• SQL query validation and parameterization preventing injection attacks<br>
-• Resource limitation and timeout mechanisms
-</td>
-</tr>
-<tr>
-<td><strong>Validation</strong></td>
-<td><strong>Zero security incidents</strong> across full production deployment lifecycle.</td>
-</tr>
-</table>
+### 2. Hybrid Retrieval Architecture
 
-### 5️⃣ Production ML Engineering
+**Challenge:**  
+Single-modality retrieval (for example, pure vector search) is insufficient for workloads that require **conceptual understanding**, **precise structured queries**, and **visual reasoning** across diverse content types.
 
-<table>
-<tr>
-<td width="20%"><strong>Contribution</strong></td>
-<td>Full-stack deployment demonstrating scalable ML system engineering practices from prototype to production.</td>
-</tr>
-<tr>
-<td><strong>Implementation</strong></td>
-<td>
-• JWT authentication (Supabase)<br>
-• Stripe-based billing system<br>
-• Server-Sent Events (SSE) streaming<br>
-• Docker-based deployment<br>
-• Observability using LangFuse<br>
-• Modular architecture supporting independent component scaling
-</td>
-</tr>
-<tr>
-<td><strong>Validation</strong></td>
-<td>Successfully deployed and operated at production scale with real-time performance and production-grade uptime.</td>
-</tr>
-</table>
+**Contribution:**  
+A **hybrid retrieval framework** that integrates:
+
+- dense vector retrieval (semantic similarity),
+- read-only SQL tools (structured data access), and
+- vision-based analysis (diagrams and images),
+
+with **intelligent query routing** and **result fusion**.
+
+**Implementation Highlights:**
+
+- Supabase/PostgreSQL with `pgvector`
+- Document ingestion from Google Drive and local file systems
+- Semantic chunking with configurable granularity
+- Hybrid retrieval pipeline that merges vector and SQL results into unified context
+
+---
+
+### 3. Production-Scale Episodic Memory
+
+**Challenge:**  
+Most conversational systems do not support **persistent, queryable memory** across sessions, limiting personalization and long-horizon coherence.
+
+**Contribution:**  
+A **long-term episodic memory layer** enabling cross-session context persistence and semantically aware retrieval.
+
+**Implementation Highlights:**
+
+- Mem0-based memory with semantic indexing
+- User-specific memory integrated directly into the agent loop
+- Conversation context preserved across sessions with privacy-preserving user isolation (for example, RLS policies)
+
+**Validation:**  
+Empirically supports consistent multi-session behavior across returning users.
+
+---
+
+### 4. Safe Tool Orchestration
+
+**Challenge:**  
+Agent-generated code and arbitrary tool calls pose substantial security risks in real deployments.
+
+**Contribution:**  
+A **secure tool orchestration layer** with sandboxing, validation, and resource constraints.
+
+**Implementation Highlights:**
+
+- `RestrictedPython` sandbox for controlled Python execution
+- SQL query validation and parameterization to reduce injection risk
+- Timeouts and resource limits on tool executions
+
+**Validation:**  
+No security incidents were observed during the production deployment period.
+
+---
+
+### 5. Production ML Engineering
+
+**Contribution:**  
+A full-stack deployment that demonstrates the end-to-end path from research prototype to production system.
+
+**Implementation Highlights:**
+
+- JWT-based authentication (Supabase)
+- Stripe-based token billing
+- Server-Sent Events (SSE) streaming for real-time responses
+- Docker-based deployment and reverse proxy configuration
+- Observability with Langfuse
 
 ---
 
 ## System Architecture
 
-### Technology Stack
+For full architectural detail, see **[System Architecture](./docs/structure/ARCHITECTURE.md)**.
 
-<table>
-<tr>
-<th width="15%">Layer</th>
-<th width="25%">Technology</th>
-<th width="25%">Purpose</th>
-<th>Key Features</th>
-</tr>
-<tr>
-<td><strong>Frontend</strong></td>
-<td>React + TypeScript</td>
-<td>User Interface</td>
-<td>SSE streaming, real-time chat, admin dashboard</td>
-</tr>
-<tr>
-<td><strong>Backend API</strong></td>
-<td>FastAPI + Pydantic AI</td>
-<td>Agent Orchestration</td>
-<td>Async processing, hierarchical delegation, tool execution</td>
-</tr>
-<tr>
-<td><strong>RAG Pipeline</strong></td>
-<td>LangChain + Vector DB</td>
-<td>Document Processing</td>
-<td>Multi-modal retrieval, semantic search, SQL generation</td>
-</tr>
-<tr>
-<td><strong>Database</strong></td>
-<td>Supabase (PostgreSQL)</td>
-<td>Data Persistence</td>
-<td>Vector extensions, RLS policies, real-time subscriptions</td>
-</tr>
-<tr>
-<td><strong>Memory</strong></td>
-<td>Mem0</td>
-<td>Episodic Memory</td>
-<td>Long-term context, semantic indexing, temporal decay</td>
-</tr>
-<tr>
-<td><strong>Payments</strong></td>
-<td>Stripe</td>
-<td>Billing</td>
-<td>Token-based usage, subscription management</td>
-</tr>
-<tr>
-<td><strong>Observability</strong></td>
-<td>Langfuse</td>
-<td>Monitoring</td>
-<td>Distributed tracing, performance analytics</td>
-</tr>
-</table>
+That document includes:
 
-### Component Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    Frontend Layer (React/TypeScript)             │
-│          Real-time Streaming • Chat Interface • Admin            │
-└───────────────────────────┬─────────────────────────────────────┘
-                            │ Server-Sent Events (SSE) / HTTP
-
-┌───────────────────────────▼─────────────────────────────────────┐
-│                 Backend API Layer (FastAPI)                      │
-│                                                                   │
-│         ┌───────────────────────────────────────┐               │
-│         │   Primary Orchestrator Agent          │               │
-│         │   • Task Decomposition                │               │
-│         │   • Context Management                │               │
-│         │   • Response Synthesis                │               │
-│         └────┬─────────────────────────────┬────┘               │
-│              │                             │                     │
-│    ┌─────────▼────────┐         ┌─────────▼────────┐           │
-│    │  Vision Agent    │         │  Language Agent  │           │
-│    │  • Image Analysis│         │  • Text Process  │           │
-│    │  • OCR           │         │  • Tool Execution│           │
-│    └──────────────────┘         └──────────────────┘           │
-
-└───────────────────────────┬─────────────────────────────────────┘
-                            │
-
-┌───────────────────────────▼─────────────────────────────────────┐
-│                    RAG Pipeline Layer                            │
-│                                                                   │
-│   ┌─────────────┐  ┌──────────────┐  ┌─────────────────┐      │
-│   │   Vector    │  │     SQL      │  │    Document     │      │
-│   │   Search    │  │  Generation  │  │   Processing    │      │
-│   └─────────────┘  └──────────────┘  └─────────────────┘      │
-
-└───────────────────────────┬─────────────────────────────────────┘
-                            │
-
-┌───────────────────────────▼─────────────────────────────────────┐
-│                   Data Layer (Supabase + Mem0)                   │
-│                                                                   │
-│   Documents • Users • Memory • Conversations • Billing • Logs    │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### Design Principles
-
-| Principle           | Implementation                                              | Benefit                                |
-| ------------------- | ----------------------------------------------------------- | -------------------------------------- |
-| **Modularity**      | Independent component deployment with isolated dependencies | Maintainable and testable architecture |
-| **Scalability**     | Horizontal scaling at component level                       | Handles growing computational demands  |
-| **Observability**   | Comprehensive tracing and monitoring                        | Production debugging and optimization  |
-| **Security**        | Multi-layered (RLS, sandboxing, validation)                 | Production-grade security posture      |
-| **Maintainability** | Clear separation of concerns                                | Long-term code health and evolution    |
-
----
-
-## Performance Metrics
-
-<div align="center">
-
-|          Metric           |        Value         |                            Context                             |
-| :-----------------------: | :------------------: | :------------------------------------------------------------: |
-|  **📚 Document Sources**  |   **Multi-source**   | Google Drive API and local filesystem (PDF, CSV, images, text) |
-|  **⚡ Response Latency**  |    **Real-time**     |                  Server-Sent Events streaming                  |
-|   **💰 Billing System**   |   **Token-based**    |             Stripe integration with usage tracking             |
-| **🛡️ Security Incidents** |        **0**         |               Across full production deployment                |
-| **📈 Deployment Status**  | **Production-ready** |             With authentication and observability              |
-
-</div>
+- High-level system diagram
+- Multi-agent workflow
+- RAG pipeline design
+- Memory architecture
+- Security and safety layer
 
 ---
 
 ## Research Methodology
 
-This project follows a **research-through-building** methodology, validating theoretical approaches through production deployment:
+The project follows a **research-through-building** approach:
 
+```text
+Problem identification → Architecture design → Implementation → Real-world evaluation → Iteration
 ```
-Problem ID → Design → Implementation → Evaluation → Iteration
-     ↓          ↓           ↓              ↓           ↓
-Production   Hierarchical  Production    Real-world  Continuous
-  needs      patterns      validation     metrics    refinement
-```
-
-### Methodology Steps
-
-1. **Problem Identification** — Challenges in multi-agent coordination emerged from production needs in autonomous agent systems
-
-2. **Architectural Design** — Hierarchical patterns designed to address semantic coherence preservation
-
-3. **Implementation** — Production-scale validation of theoretical approaches
-
-4. **Evaluation** — Real-world metrics (user engagement, query success rates, system performance)
-
-5. **Iteration** — Continuous refinement based on production feedback
-
-**Research artifacts available in private repository** — Contact for access to detailed methodology, development journals, and experimental results.
-
----
-
-## Future Research Directions
-
-This project establishes foundations for research directions I aim to pursue in doctoral studies:
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### Theoretical Foundations
-
-- **Formal Analysis:** Can we prove semantic coherence bounds in hierarchical systems?
-- **Complexity Theory:** What are the computational complexity limits of agent coordination?
-- **Context Propagation:** Mathematical models for optimal context sharing across agents
-
-</td>
-<td width="50%" valign="top">
-
-### Applied Systems
-
-- **Scalability:** Practical approaches for agent coordination at scale (10K+ agents)
-- **Memory Models:** Advanced episodic memory for long-context AI systems (100K+ tokens)
-- **Evaluation:** Frameworks and metrics for assessing multi-agent coherence
-
-</td>
-</tr>
-</table>
-
----
-
-## Documentation Structure
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### Public Repository (This Repo)
-
-✅ **Architecture Documentation**
-
-✅ **System Design & Research Contributions**
-
-✅ **Deployment Guides** (architecture-focused)
-
-✅ **Theoretical Foundations**
-
-</td>
-<td width="50%" valign="top">
-
-### Private Repository
-
-🔒 **Implementation Code** (`backend_agent_api/`, `frontend/`)
-
-🔒 **Setup & Configuration** (`SETUP.md`, `.env` templates)
-
-🔒 **Database Schemas** (SQL scripts, migrations)
-
-🔒 **Research Development** (methodology, artifacts)
-
-</td>
-</tr>
-</table>
-
-**Core Documentation:**
-
-- **[System Architecture](./docs/structure/ARCHITECTURE.md)** — High-level architecture with Mermaid diagrams, workflows, and design patterns
-
-- **[Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** — Complete implementation structure and organization
-
-- **[Project Organization](./docs/structure/PROJECT_STRUCTURE.md)** — Structure rationale and principles
-
-- **[Deployment Guides](./docs/deployment/guides/)** — Platform-specific deployment documentation
-
----
-
-## Publications & Presentations
-
-This work is being prepared for submission to relevant venues in multi-agent systems and ML systems engineering. Academic reviewers are welcome to discuss:
-
-- Publication plans and target venues
-
-- Research directions and collaboration opportunities
-
-- PhD research proposals building on this foundation
-
----
-
-## Contact
-
-<div align="center">
-
-### Quick Contact
-
-**T Ateya** | AI Systems Engineer & Machine Learning Researcher | PhD Applicant (Fall 2026)
-
-[📧 Academic Email](mailto:tateya@uco.edu) • [📧 Company Email](mailto:softbrickstech@gmail.com) • [🔗 LinkedIn](https://linkedin.com/in/ateya-terence)
-
-**Response Time:** 24-48 hours | **Subject:** `PhD Application - Multi-Agent Systems Research`
-
-</div>
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### Applicant Information
-
-**T Ateya**
-
-AI Systems Engineer & Machine Learning Researcher
-
-PhD Applicant (Fall 2026)
-
-📧 **Academic Email:** tateya@uco.edu
-
-📧 **Company Email:** softbrickstech@gmail.com
-
-📍 **Location:** Oklahoma City, OK, USA
-
-🔗 **LinkedIn:** [View Profile](https://linkedin.com/in/ateya-terence)
-
-</td>
-<td width="50%" valign="top">
-
-### Contact Guidelines
-
-**For Academic Inquiries:**
-
-Research methodology, implementation details, or PhD application materials
-
-**Subject Line:**
-
-`PhD Application - Multi-Agent Systems Research`
-
-**Response Time:** 24-48 hours
-
-**Implementation Access:** Include academic affiliation and review purpose
-
-</td>
-</tr>
-</table>
-
----
-
-## License & Usage
-
-**Academic Review License** — This repository is maintained for academic review purposes in support of PhD applications.
-
-- ✅ **Permitted:** Academic evaluation, recommendation letters, application review
-
-- ✅ **Citation:** Contact for appropriate citation format if referencing academically
-
-- ❌ **Restricted:** Commercial use, redistribution, derivative works without permission
-
-The complete implementation is proprietary and maintained in a private repository during the application cycle.
-
----
-
-## Acknowledgments
-
-This research was developed independently as part of PhD application portfolio development. The work builds upon and integrates several open-source frameworks and technologies:
-
-**Core Technologies:** Pydantic AI, LangChain, FastAPI, React, Supabase, Mem0, Langfuse
-
-**Special Thanks:** To the open-source communities and frameworks that enabled this research.
-
----
-
-## Next Steps
-
-**If you are reviewing my PhD application:**
-
-1. Start with [System Architecture](./docs/structure/ARCHITECTURE.md).
-2. Skim [Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md) to see implementation scope.
-3. Email me to request temporary read access to the private implementation repository, if needed.
-
----
-
-<div align="center">
-
-**Ready to explore?** [View Architecture](./docs/structure/ARCHITECTURE.md) • [Request Access](#contact)
-
----
-
-**Last Updated:** November 2025
-
-**Version:** 1.0.0 (Academic Review)
-
-**Status:** Frozen snapshot for PhD applications (Fall 2026). Any future extensions will be documented separately.
-
----
-
-_Building theoretical foundations for next-generation multi-agent information retrieval systems_
-
-</div>
