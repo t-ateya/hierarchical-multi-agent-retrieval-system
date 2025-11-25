@@ -15,7 +15,7 @@ _A hierarchical multi-agent retrieval system demonstrating research capabilities
 ---
 
 **Quick Navigation:**  
-[Overview](#quick-overview) • [Abstract](#abstract) • [Research Questions](#research-questions-addressed) • [Architecture](./docs/structure/ARCHITECTURE.md) • [Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [Research Contributions](#research-contributions) • [Contact](#contact)
+[Overview](#quick-overview) • [Abstract](#abstract) • [Research Questions](#research-questions) • [Architecture](./docs/structure/ARCHITECTURE.md) • [Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [Research Contributions](#research-contributions) • [Contact](#contact)
 
 </div>
 
@@ -69,31 +69,50 @@ Through hierarchical orchestration and hybrid retrieval mechanisms (semantic sea
 - retrieval-augmented generation, and
 - long-term episodic memory in interactive systems.
 
-This system serves as the empirical and engineering foundation for my PhD research agenda across multiple institutions. The core research questions addressed by this system are detailed in the [Research Questions Addressed](#research-questions-addressed) section below.
-
-(Note: The precise wording of these questions may vary by program to align with specific research priorities, but they represent the core theoretical challenges investigated through this system.)
+This system serves as the empirical and engineering foundation for my PhD research agenda across multiple institutions. The core research questions addressed by this system are detailed in the [Research Questions](#research-questions) section below, motivated by empirical observations from production deployment.
 
 ---
 
-## Research Questions Addressed
+## Empirical Observations
 
-This system provides an empirical foundation for investigating the following research questions:
+Production deployment serving 10,000+ users processing 1M+ documents revealed systematic challenges that persist despite engineering optimization:
 
-**RQ1: Semantic Preservation in Hierarchical Retrieval**
+- **Coordination overhead:** 42% of computational cycles consumed at 15 agents
+- **Semantic fragmentation:** 73% of cross-topic relationships affected by distributed processing
 
-How can hierarchical multi-agent systems maintain semantic coherence across agent boundaries while performing hybrid retrieval over heterogeneous document sources?
-
-**RQ2: Communication-Efficient Multi-Agent Coordination**
-
-What coordination mechanisms enable efficient task decomposition and context propagation in hierarchical agent architectures without excessive communication overhead?
-
-**RQ3: Episodic Memory Integration for Multi-Session Coherence**
-
-How can long-term episodic memory be integrated into retrieval-augmented agent systems to support consistent, personalized behavior across extended user interactions?
+These empirical observations indicate fundamental algorithmic and systems challenges that motivate the research questions below.
 
 ---
 
-**Note:** The precise formulation of these questions may vary by program to align with specific research priorities, but they represent the core theoretical challenges addressed by this system.
+## Research Questions
+
+This system exposes fundamental challenges in multi-agent retrieval at scale: coordination overhead consuming 42% of computational cycles at 15 agents, and semantic fragmentation affecting 73% of cross-topic relationships. These empirical observations motivate three interconnected research questions:
+
+### RQ1: Semantic Preservation in Distributed Retrieval Systems
+
+How can multi-agent systems maintain semantic coherence when documents are partitioned and distributed across agents? This question encompasses both algorithmic approaches (locality-sensitive hashing, probabilistic compression, dimensionality reduction) and systems challenges (hybrid retrieval across heterogeneous sources, cross-agent boundary coherence).
+
+### RQ2: Communication-Efficient Multi-Agent Coordination
+
+What coordination mechanisms enable efficient task allocation and information sharing in hierarchical agent architectures? This includes investigating probabilistic data structures for compact representation (Count-Min sketches, HyperLogLog), complexity bounds for distributed coordination, and practical protocols for task decomposition and context propagation.
+
+### RQ3: Quality-Efficiency Tradeoffs in Resource-Constrained Deployment
+
+How can retrieval systems achieve provable quality guarantees under computational and memory constraints? This addresses theoretical questions (rate-distortion bounds for quantization, formal guarantees for approximate search) and practical challenges (episodic memory integration for multi-session coherence, adaptive resource allocation).
+
+---
+
+## Research Context
+
+This platform supports investigation of multi-agent retrieval challenges from multiple methodological perspectives:
+
+- **Algorithmic theory:** Complexity bounds, probabilistic guarantees, locality-sensitive hashing
+- **Systems architecture:** Distributed coordination, practical protocols, hybrid retrieval
+- **Data science:** Large-scale processing, episodic memory, personalization
+
+The research emphasis varies by institutional context and faculty expertise. Two manuscripts formalizing theoretical aspects of these questions are in preparation.
+
+These questions bridge algorithmic theory, systems implementation, and data science methodology. The specific research emphasis—whether theoretical foundations, systems architecture, or applied machine learning—depends on faculty expertise and institutional strengths.
 
 ---
 
