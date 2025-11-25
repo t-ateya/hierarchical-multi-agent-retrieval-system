@@ -17,7 +17,7 @@ hierarchical-multi-agent-retrieval-system/
 │   ├── PRPs/                          # Pattern Recognition Protocols
 │   │   ├── INITIAL-EXAMPLE.md
 │   │   └── templates/
-│   ├── challange/                     # Challenge scenarios and prompts
+│   ├── challenge/                     # Challenge scenarios and prompts
 │   │   ├── challenge.md
 │   │   ├── prompt.md
 │   │   └── bad_prompt.md

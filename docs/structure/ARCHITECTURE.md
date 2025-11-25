@@ -23,7 +23,7 @@ graph TB
 
     subgraph "Agent Layer"
         MAIN[Main Orchestrator Agent<br/>Pydantic AI]
-        VISION[Vision Sub-Agent<br/>GPT-4 Vision]
+        VISION[Vision Sub-Agent<br/>Vision Models]
         LANG[Language Sub-Agent<br/>LLM Processing]
         TOOLS[Tool Orchestrator<br/>Safe Execution]
     end
@@ -115,7 +115,7 @@ sequenceDiagram
 
     alt Image Content Detected
         Orchestrator->>Vision: Delegate image analysis
-        Vision->>Vision: Process with GPT-4 Vision
+        Vision->>Vision: Process with vision model
         Vision-->>Orchestrator: Image analysis result
     end
 
@@ -398,7 +398,7 @@ flowchart TD
 | ---------------- | ------------------------- | --------------------------------------- |
 | **Frontend**     | React, TypeScript, Vite   | User interface with real-time streaming |
 | **Backend API**  | FastAPI, Pydantic AI      | Agent orchestration and API endpoints   |
-| **Agents**       | Pydantic AI, GPT-4 Vision | Multi-agent coordination                |
+| **Agents**       | Pydantic AI, Vision Models | Multi-agent coordination                |
 | **RAG Pipeline** | LangChain, pgvector       | Document retrieval and processing       |
 | **Database**     | Supabase (PostgreSQL)     | Data persistence with vector extensions |
 | **Memory**       | Mem0                      | Episodic memory and context management  |

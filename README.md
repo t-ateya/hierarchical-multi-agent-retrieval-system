@@ -15,7 +15,7 @@ _A hierarchical multi-agent retrieval system demonstrating research capabilities
 ---
 
 **Quick Navigation:**  
-[Overview](#quick-overview) • [Abstract](#abstract) • [Architecture](./docs/structure/ARCHITECTURE.md) • [Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [Research Contributions](#research-contributions) • [Contact](#contact)
+[Overview](#quick-overview) • [Abstract](#abstract) • [Research Questions](#research-questions-addressed) • [Architecture](./docs/structure/ARCHITECTURE.md) • [Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md) • [Research Contributions](#research-contributions) • [Contact](#contact)
 
 </div>
 
@@ -69,11 +69,31 @@ Through hierarchical orchestration and hybrid retrieval mechanisms (semantic sea
 - retrieval-augmented generation, and
 - long-term episodic memory in interactive systems.
 
-This system serves as the empirical and engineering foundation for my PhD research agenda across multiple institutions. While the precise wording of research questions may vary by program, they center on:
+This system serves as the empirical and engineering foundation for my PhD research agenda across multiple institutions. The core research questions addressed by this system are detailed in the [Research Questions Addressed](#research-questions-addressed) section below.
 
-- semantic preservation under hierarchical and hybrid retrieval,
-- communication-efficient multi-agent coordination, and
-- episodic memory integration for multi-session coherence.
+(Note: The precise wording of these questions may vary by program to align with specific research priorities, but they represent the core theoretical challenges investigated through this system.)
+
+---
+
+## Research Questions Addressed
+
+This system provides an empirical foundation for investigating the following research questions:
+
+**RQ1: Semantic Preservation in Hierarchical Retrieval**
+
+How can hierarchical multi-agent systems maintain semantic coherence across agent boundaries while performing hybrid retrieval over heterogeneous document sources?
+
+**RQ2: Communication-Efficient Multi-Agent Coordination**
+
+What coordination mechanisms enable efficient task decomposition and context propagation in hierarchical agent architectures without excessive communication overhead?
+
+**RQ3: Episodic Memory Integration for Multi-Session Coherence**
+
+How can long-term episodic memory be integrated into retrieval-augmented agent systems to support consistent, personalized behavior across extended user interactions?
+
+---
+
+**Note:** The precise formulation of these questions may vary by program to align with specific research priorities, but they represent the core theoretical challenges addressed by this system.
 
 ---
 
@@ -106,7 +126,7 @@ Multi-agent systems, scalable information retrieval, retrieval-augmented generat
 | **[System Architecture](./docs/structure/ARCHITECTURE.md)**        | High-level architecture and workflows         |
 | **[Project Structure](./docs/structure/PROJECT_STRUCTURE.md)**     | Organizational rationale for research context |
 | **[Directory Structure](./docs/structure/DIRECTORY_STRUCTURE.md)** | Full implementation layout                    |
-| **[Deployment Guides](./deployment/guides/)**                      | Platform-specific deployment documentation    |
+| **[Deployment Guides](./docs/deployment/guides/)**                 | Platform-specific deployment documentation    |
 
 </td>
 </tr>
@@ -257,3 +277,85 @@ The project follows a **research-through-building** approach:
 ```text
 Problem identification → Architecture design → Implementation → Real-world evaluation → Iteration
 ```
+
+- Problems emerged from realistic, production-style requirements.
+
+- Architectural patterns were evaluated empirically through deployment.
+
+- Results and failure modes (performance, coordination, memory behavior) inform my ongoing and future research questions.
+
+This repository, together with the private implementation, forms the main **empirical foundation** for the multi-agent retrieval research program described in my PhD applications.
+
+---
+
+## Documentation Structure
+
+Key high-level docs:
+
+- **[ARCHITECTURE.md](./docs/structure/ARCHITECTURE.md)**
+
+  High-level design, workflows, and diagrams
+
+- **[PROJECT_STRUCTURE.md](./docs/structure/PROJECT_STRUCTURE.md)**
+
+  Design rationale for research-oriented organization
+
+- **[DIRECTORY_STRUCTURE.md](./docs/structure/DIRECTORY_STRUCTURE.md)**
+
+  Full, concrete file tree of the implementation
+
+---
+
+## Publications and Future Work
+
+This work is currently being developed into **research manuscripts** on:
+
+- semantic preservation in distributed retrieval systems, and
+
+- coordination complexity in multi-agent retrieval architectures.
+
+These manuscripts build directly on the empirical behavior of this system and will form the core of my doctoral research trajectory.
+
+---
+
+## Contact
+
+<div align="center">
+
+**Terence Ateya**
+
+AI Systems Engineer and Machine Learning Researcher
+
+PhD Applicant (Target: Fall 2026)
+
+📧 **Academic Email:** [tateya@uco.edu](mailto:tateya@uco.edu)
+
+📧 **Alternate Email:** [softbrickstech@gmail.com](mailto:softbrickstech@gmail.com)
+
+🔗 **LinkedIn:** [linkedin.com/in/ateya-terence](https://linkedin.com/in/ateya-terence)
+
+**Suggested Subject Line:**
+
+`PhD Application - Multi-Agent Retrieval System Review`
+
+**Typical Response Time:** 24–48 hours
+
+</div>
+
+---
+
+## License and Usage
+
+This repository is provided under an **Academic Review License** for the purpose of **PhD application evaluation and academic review**.
+
+- ✅ Academic evaluation, reference in recommendation letters, and application review are permitted.
+
+- ❌ Commercial use, redistribution, or derivative works require explicit permission.
+
+The full implementation code remains proprietary in a private repository during the application cycle.
+
+---
+
+_Last Updated: November 2025_
+
+_Version: 1.0.0 (Academic Review Snapshot)_
